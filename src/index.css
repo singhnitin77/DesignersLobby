@@ -4,6 +4,13 @@
 
 .text-gradient-how-it-works {
   background: linear-gradient(90deg, #4ca5ff 2.34%, #b673f8 100.78%);
+  background: linear-gradient(
+    120deg,
+    rgb(255, 166, 0) 0%,
+    rgb(255, 95, 88) 30%,
+    rgb(64, 68, 183) 88%,
+    rgb(97, 81, 162) 100%
+  );
   -webkit-background-clip: text !important;
   background-size: cover;
   -webkit-text-fill-color: transparent;
