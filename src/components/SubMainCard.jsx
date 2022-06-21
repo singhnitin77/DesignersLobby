@@ -34,7 +34,10 @@ const urlEndpoint = "https://ik.imagekit.io/6djsamqli";
 // export default MainCard;
 const SubMainCard = ({ image, name, description, category_name, link }) => {
   return (
-    <div className="shadow-md bg-white hover:shadow-lg transition duration-300 rounded-[12px] cursor:pointer onhover:shadow-lg border-transparent dark:bg-[#1f1f1f] overflow-hidden">
+    <div
+      className="shadow-md bg-white hover:shadow-lg transition duration-300 rounded-[12px] cursor:pointer onhover:shadow-lg border-transparent dark:bg-[#1f1f1f] overflow-hidden"
+      data-aos="fade-left"
+    >
       {/* <img className="w-full block" src={image} alt="" /> */}
       <IKContext urlEndpoint={urlEndpoint}>
         <IKImage src={image} className="w-full block" />

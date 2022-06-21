@@ -106,7 +106,7 @@ const Features = () => {
       <div className="h-auto w-full flex items-center justify-center p-7">
         <div className="h-auto min-h-[80vh] w-full rounded-md bg-[rgba(0,0,0,0.6)] bg-black flex items-center justify-center flex-wrap border border-[#b84f90] py-[48px] overflow-x-hidden">
           <div className="flex items-center justify-between">
-            <h1 className="text-[44px] lg:text-[44px] xl:text-[44px] text-white font-semibold font-Space text-center mb-[48px]">
+            <h1 className="text-[30px] lg:text-[36px] xl:text-[36x] text-white font-semibold font-Space text-center mb-[24px]">
               Features
             </h1>
           </div>

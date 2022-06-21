@@ -9,6 +9,29 @@
   -webkit-text-fill-color: transparent;
 }
 
+.hero-heading-gradient {
+  background: linear-gradient(120deg, #16154d, #421779);
+  -webkit-background-clip: text !important;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroimg-animation {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
 .rouned-bg {
   background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDYwQzAgNDIuNiA0Mi42IDAgNjAgMEM3Ny40IDAgMTIwIDQyLjYgMTIwIDYwQzEyMCA3Ny40IDc3LjQgMTIwIDYwIDEyMEM0Mi42IDEyMCAwIDc3LjQgMCA2MFoiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcikiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhciIgeDE9IjQwIiB5MT0iLTEuMzUxMDRlLTA2IiB4Mj0iNzciIHkyPSIxMjQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0RDMDdGRiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyQjYyRkYiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K);
   background-size: cover;
@@ -427,10 +450,18 @@
 .bg-how-works-glassmorphism {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.new-resource-glass {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(22, 21, 77, 0.75);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 // Card Animation hover

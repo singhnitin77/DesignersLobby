@@ -1,4 +1,5 @@
 import React from "react";
+import { TwtBtn, CoffeeButton } from "../components";
 
 const Footer = () => {
   return (
@@ -24,24 +25,12 @@ const Footer = () => {
             thenitinsingh77@gmail.com
           </p>
           <div className="md:flex hidden flex-row items-center justify-between">
-            <button
-              type="button"
-              class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            >
-              GitHub
-            </button>
-            <button
-              type="button"
-              class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            >
-              Buy me Coffee
-            </button>
-            <button
-              type="button"
-              class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            >
-              Newsletter
-            </button>
+            <div className="lg:ml-1 xl:ml-1 mt-2 xl:mt-0 lg:mt-0">
+              <CoffeeButton />
+            </div>
+            <div className="lg:ml-1 xl:ml-1 mt-2 xl:mt-0 lg:mt-0">
+              <TwtBtn />
+            </div>
           </div>
         </div>
       </div>

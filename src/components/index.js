@@ -13,3 +13,7 @@ export { default as SubMainCard } from "./SubMainCard";
 export { default as MainPageCard } from "./MainPageCard";
 export { default as Loader } from "./Loader";
 export { default as BannerCard } from "./BannerCard";
+export { default as TwtBtn } from "./TwtBtn";
+export { default as CoffeeButton } from "./CoffeeButton";
+export { default as ContributeBanner } from "./ContributeBanner";
+export { default as ResourceContributors } from "./ResourceContributors";
