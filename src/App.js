@@ -11,7 +11,6 @@ import {
   Categories,
   MainCategories,
 } from "./containers";
-import { Illustration, Icon } from "./Resources";
 import Newsletter from "./containers/Newsletter";
 import { useGlobalContext } from "../src/constants/Context";
 import { SubCategoryProvider } from "./context/SubCategory";

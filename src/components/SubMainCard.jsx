@@ -4,33 +4,6 @@ import { IKImage, IKContext } from "imagekitio-react";
 
 const urlEndpoint = "https://ik.imagekit.io/6djsamqli";
 
-// const MainCard = ({ image, name, description, category_name, link }) => {
-//   return (
-//     <div className="shadow-md bg-white hover:shadow-lg transition duration-300 rounded-[12px] cursor:pointer onhover:shadow-lg border-transparent dark:bg-[#1f1f1f] overflow-hidden">
-//       {/* <img className="w-full block" src={image} alt="" /> */}
-//       <IKContext urlEndpoint={urlEndpoint}>
-//         <IKImage src={image} className="w-full block" />
-//       </IKContext>
-//       <div className="p-[18px]">
-//         <div className="flex items-center flex-row">
-//           <h1 className="text-black font-semibold font-Inter text-[20px] mb-[16px] mr-[10px] mt-[16px] dark:text-white">
-//             {name}
-//           </h1>
-//           <a href={link} target="_blank">
-//             <FiExternalLink className="text-[20px]" />
-//           </a>
-//         </div>
-//         <p className="text-[#86868d] font-light leading-tight font-Space text-[16px] mb-[16px]">
-//           {description}
-//         </p>
-//         <h3 className="text-medium font-Space font-semibold text-[14px] text-[#3d5eff] dark:text-[#f1f3f5]">
-//           {category_name}
-//         </h3>
-//       </div>
-//     </div>
-//   );
-// };
-
 // export default MainCard;
 const SubMainCard = ({ image, name, description, category_name, link }) => {
   return (

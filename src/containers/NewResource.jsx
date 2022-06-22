@@ -7,7 +7,7 @@ const NewResource = () => {
   const [values, setValues] = useState({
     resource_name: "",
     resource_link: "",
-    category: "Illustration",
+    category: "Illustrations",
     full_name: "",
   });
 

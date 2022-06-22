@@ -42,7 +42,7 @@ const Categories = () => {
       }
     };
     init();
-  }, [SubCategory , categories]);
+  }, [SubCategory, categories]);
 
   useEffect(() => {
     console.log(resource);
