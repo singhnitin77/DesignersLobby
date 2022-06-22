@@ -14,31 +14,37 @@ import {
 import { Illustration, Icon } from "./Resources";
 import Newsletter from "./containers/Newsletter";
 import { useGlobalContext } from "../src/constants/Context";
+import { SubCategoryProvider } from "./context/SubCategory";
+import { ResourceProvider } from "./context/Resource";
 
 const App = () => {
   const { darkMode } = useGlobalContext();
 
   return (
-    <div className={`${darkMode && "dark"}`}>
-      <Router>
-        <Navbar />
+    <SubCategoryProvider>
+      <ResourceProvider>
+        <div className={`${darkMode && "dark"}`}>
+          <Router>
+            <Navbar />
 
-        <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="contributors" element={<Contributors />} />
+            <Routes>
+              <Route path="/" element={<Hero />} />
+              <Route path="contributors" element={<Contributors />} />
 
-          <Route path="category" element={<Category />}>
-            <Route path=":categories" element={<Categories />} />
-          </Route>
+              <Route path="category" element={<Category />}>
+                <Route path=":categories" element={<Categories />} />
+              </Route>
 
-          <Route path="newresource" element={<NewResource />} />
-          <Route path="newsletter" element={<Newsletter />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-        <Sidebar />
-        <Footer />
-      </Router>
-    </div>
+              <Route path="newresource" element={<NewResource />} />
+              <Route path="newsletter" element={<Newsletter />} />
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+            <Sidebar />
+            <Footer />
+          </Router>
+        </div>
+      </ResourceProvider>
+    </SubCategoryProvider>
   );
 };
 

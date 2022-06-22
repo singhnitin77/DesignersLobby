@@ -21,14 +21,16 @@ const Newsletter = () => {
                 /> */}
             <input
               type="email"
-              class="w-[90%]  md:w-[70%] py-[12px] px-[16px] border border-gray-300 rounded-md placeholder:font-Inter placeholder:font-light focus:outline-none focus:shadow-outline shadow appearance-none font-Inter"
+              className="w-[90%]  md:w-[70%] py-[12px] px-[16px] border border-gray-300 rounded-md placeholder:font-Inter placeholder:font-light focus:outline-none focus:shadow-outline shadow appearance-none font-Inter"
               placeholder="Enter your email address"
             />
-            <div class="md:mt-[32px] mt-[20px]">
-              <button class="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500">
-                <span class="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
-                <span class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-90 ease"></span>
-                <span class="relative text-white font-Space">Submit Now</span>
+            <div className="md:mt-[32px] mt-[20px]">
+              <button className="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500">
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
+                <span className="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-90 ease"></span>
+                <span className="relative text-white font-Space">
+                  Submit Now
+                </span>
               </button>
             </div>
           </div>

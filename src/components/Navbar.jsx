@@ -46,8 +46,8 @@ const Navbar = () => {
           to="/newsletter"
           className="md:flex lg:flex xl:flex items-center justify-center hidden"
         >
-          <button class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-[18px] font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:outline-none">
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0  text-[18px] font-medium font-Space">
+          <button className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-[18px] font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:outline-none">
+            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0  text-[18px] font-medium font-Space">
               Newsletter
             </span>
           </button>

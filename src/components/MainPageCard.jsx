@@ -9,7 +9,7 @@ import {
 
 import { BsFillBookmarkFIll } from "react-icons/bs";
 
-const MainPageCard = ({ image, name, description, link }) => {
+const MainPageCard = ({ image, name, description, link , category}) => {
   return (
     <Link to={link}>
       <div
@@ -31,7 +31,7 @@ const MainPageCard = ({ image, name, description, link }) => {
             </p>
           </a>
           <div className="bg-red-500 inline-block font-Inter text-[14px] px-[12px] py-[6px] mt-[10px] rounded-[20px]">
-            <p>Illustration</p>
+            <p>{category}</p>
           </div>
         </div>
       </div>
