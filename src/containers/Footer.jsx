@@ -17,7 +17,7 @@ const Footer = () => {
             </a>
           </h3>
         </div>
-        <div class="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-between">
+        <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-between">
           <h3 className="text-[18px] font-Inter font-semibold text-white">
             Copyright &copy; 2022 DesignHouse
           </h3>
