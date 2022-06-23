@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, IconButton } from "@mui/material";
 import heroimage from "../assets/heroimage.png";
 import { Features, How_works, MainCategories } from "../containers";
 import NavHeader from "./NavHeader";
 
 const Hero = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <>
       <div className="flex flex-col md:flex-row px-[40px] py-[60px] bg-cover bg-no-repeat bg-center bg-background-4 overflow-hidden">
@@ -59,8 +61,8 @@ const Hero = () => {
       </div>
       <Features />
       <How_works />
-      <NavHeader />
-      <MainCategories />
+      <NavHeader setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
+      <MainCategories searchTerm={searchTerm} />
     </>
   );
 };

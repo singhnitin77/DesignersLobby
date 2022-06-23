@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { FiGrid, FiList, FiMenu, FiMoon, FiSun } from "react-icons/fi";
-import SearchBar from "./SearchBar";
+// import SearchBar from "./SearchBar";
 import { useGlobalContext } from "../constants/Context";
+import { BsSearch, BsX } from "react-icons/bs";
+import { useSubCategory } from "../context/SubCategory";
+import { useResource } from "../context/Resource";
 
-const NavHeader = ({}) => {
+const NavHeader = ({ searchTerm, setSearchTerm }) => {
   const {
     darkMode,
     setDarkMode,
-    listView,
-    setListView,
     toggleDrawer,
     toggleDarkMode,
+    listView,
+    setListView,
   } = useGlobalContext();
 
   // Toggle Dark Mode
+
+  // const { SubCategory } = useSubCategory();
 
   // View Toggle
   const toggleListView = () => {
@@ -31,8 +36,24 @@ const NavHeader = ({}) => {
             <span className="ml-[10px]">Category</span>
           </div>
         </button>
-        {/* <SearchBar searchvalue={searchTerm} setSearchvalue={setSearchTerm} /> */}
-        <SearchBar />
+
+        {/* <SearchBar /> */}
+        <div className="flex border border-[#ddd] hover:border-[#3d5eff] duration-500 focus:border-[#3d5eff] pl-3 rounded-lg p-1 w-9/12 items-center justify-between ml-1 dark:border-[#555]">
+          <input
+            type="text"
+            placeholder="Search"
+            className="h-full py-1 w-full bg-transparent text-[16px] lg:text-base border-none focus:outline-none dark:text-white"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <div className="bg-[#3d5eff] p-2 lg:p-3 ml-2 cursor:pointer shine rounded-lg text-[16px] lg:text-[18px]">
+            {searchTerm ? (
+              <BsX className="text-white" onClick={() => setSearchTerm("")} />
+            ) : (
+              <BsSearch className="text-white" />
+            )}
+          </div>
+        </div>
       </div>
 
       <div className="flex space-x-[10px]">

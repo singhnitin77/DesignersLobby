@@ -49,14 +49,14 @@ const Sidebar = () => {
       <div
         className={`${
           darkMode ? "dark bg-[#2f2f2f] text-white" : "bg-[#ECF2F5]"
-        } w-[85vw] lg:w-[25vw] md:w-[65vw] xl:w-[25vw] h-full flex gap-y-0 flex-col relative overflow-y-scroll`}
+        } w-[85vw] lg:w-[25vw] md:w-[65vw] xl:w-[25vw] h-full flex gap-y-0 flex-col overflow-y-scroll`}
       >
-        <div className="h-full w-full flex items-center flex-col py-3">
+        <div className="w-full flex items-center flex-col py-3">
           <input
             type="text"
             className="w-[92.5%] border white-light-shadow border-[#4469fa] hover:border-[#44469fa] focus:border-[#4469fa] rounded-md px-3 py-2 dark:bg-[#1f1f1f] dark:text-white"
             placeholder="Search Categories"
-            value={setSearchTerm}
+            value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
 
@@ -69,16 +69,26 @@ const Sidebar = () => {
           </div>
         </div>
 
-        <div className="py-3 px-2">
-          {SubCategory.data.map((category, i) => {
-            return (
-              <SidebarCard
-                name={category.title}
-                key={i}
-                link={`category/${category.title}`}
-              />
-            );
-          })}
+        <div className="px-2">
+          {SubCategory.data
+            .filter((val) => {
+              if (searchTerm === "") {
+                return val;
+              } else if (
+                val.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+              ) {
+                return val;
+              }
+            })
+            .map((category, i) => {
+              return (
+                <SidebarCard
+                  name={category.title}
+                  key={i}
+                  link={`category/${category.title}`}
+                />
+              );
+            })}
         </div>
       </div>
     </Drawer>

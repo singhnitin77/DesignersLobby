@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="lg:flex md:flex xl:flex flex-auto items-center justify-center md:space-x-6 hidden">
           <Link to="/">
             <p className="text-[18px] text-white continuous-line font-medium font-Space">
-              Features
+              Home
             </p>
           </Link>
           <Link to="/">
@@ -69,7 +69,7 @@ const Navbar = () => {
           <Link to="">
             <p className="p-2 w-full flex items-center justify-center border border-[#764dff] rounded-md my-[3px]">
               <h3 className="font-bold continuous-line text-center text-white">
-                Features
+                Home
               </h3>
             </p>
           </Link>

@@ -1,16 +1,22 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { CategoryHeader } from "../components";
+import {
+  CategoryHeader,
+  Loader,
+  DesignHouseInfo,
+  NavHeader,
+} from "../components";
 import { useResource } from "../context/Resource";
 import { useSubCategory } from "../context/SubCategory";
 import ResourceContainer from "../Resources/ResourceContainer";
 
-const Categories = () => {
+const Categories = ({}) => {
   const { categories } = useParams();
 
   const { resource, dispatchResource } = useResource();
   const { SubCategory } = useSubCategory();
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     const init = async () => {
@@ -48,11 +54,21 @@ const Categories = () => {
     console.log(resource);
   }, [resource]);
 
+  // if (resource.loader) {
+  //   return <Loader />;
+  // }
+
   return (
-    <div className="w-full px-[40px] py-[60px] bg-[#F3F4FD] dark:bg-[#2f2f2f]">
-      <CategoryHeader name={categories} />
-      <ResourceContainer />
-    </div>
+    <>
+      <DesignHouseInfo />
+      <NavHeader searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+
+      <div className="w-full px-[40px] py-[60px] bg-[#F3F4FD] dark:bg-[#2f2f2f]">
+        {resource.loader ? <Loader /> : null}
+        <CategoryHeader name={categories} />
+        <ResourceContainer searchTerm={searchTerm} />
+      </div>
+    </>
   );
 };
 

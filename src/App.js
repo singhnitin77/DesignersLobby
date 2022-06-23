@@ -7,7 +7,7 @@ import {
   How_works,
   Contributors,
   NewResource,
-  Category,
+  // Category,
   Categories,
   MainCategories,
 } from "./containers";
@@ -30,9 +30,8 @@ const App = () => {
               <Route path="/" element={<Hero />} />
               <Route path="contributors" element={<Contributors />} />
 
-              <Route path="category" element={<Category />}>
-                <Route path=":categories" element={<Categories />} />
-              </Route>
+              <Route path="category/:categories" element={<Categories />} />
+              {/* <Route path=":categories" element={<Categories />} /> */}
 
               <Route path="newresource" element={<NewResource />} />
               <Route path="newsletter" element={<Newsletter />} />
