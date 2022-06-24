@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { MenuItem, Select } from "@mui/material";
+import axios from "axios";
 
 const NewResource = () => {
   // Default values
@@ -22,6 +23,18 @@ const NewResource = () => {
   //   Submit event
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(resource_name, resource_link, category, full_name);
+    try {
+      const res = await axios.post("/email", {
+        resourceName: resource_name,
+        resourceLink: resource_link,
+        category: category,
+        name: full_name,
+      });
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const categories = [
