@@ -63,7 +63,7 @@ const Categories = ({}) => {
       <DesignHouseInfo />
       <NavHeader searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
-      <div className="w-full px-[40px] py-[60px] bg-[#F3F4FD] dark:bg-[#2f2f2f]">
+      <div className="w-full px-[35px] py-[40px] md:px-[80px] md:py-[80px] bg-[#F3F4FD] dark:bg-[#2f2f2f] overflow-hidden">
         {resource.loader ? <Loader /> : null}
         <CategoryHeader name={categories} />
         <ResourceContainer searchTerm={searchTerm} />

@@ -57,9 +57,9 @@ const NewResource = () => {
   ];
 
   return (
-    <div className="w-full h-full bg-background-4 bg-cover bg-no-repeat bg-center">
+    <div className="bg-background-4 bg-cover bg-no-repeat bg-center px-[35px] md:px-[60px] md:py-[60px] ">
       {/* // <div className="w-full h-full bg-[#831C6E]"> */}
-      <div className="h-full min-h-screen text-[#ecf2f5] w-full p-3 flex items-center justify-center flex-col ">
+      <div className="h-full min-h-screen text-[#ecf2f5] w-full flex items-center justify-center flex-col ">
         <h1 className="text-2xl md:text-4xl lg:text-4xl xl:text-4xl font-bold mb-[32px] lg:mb-[32px] xl:mb-[32px]  text-center font-Space hero-heading-gradient font-Inter">
           Suggest a New Resource
         </h1>

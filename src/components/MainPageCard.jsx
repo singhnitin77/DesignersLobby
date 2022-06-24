@@ -19,10 +19,10 @@ const MainPageCard = ({ image, name, description, link, category }) => {
         <img src={image} className="w-full block" />
         <div className="flex flex-col justify-between">
           <div className="flex flex-col px-[18px] justify-start items-start h-[160px]">
-            <h1 className="text-black font-semibold font-Inter text-[20px] mb-[10px] mt-[16px] leading-2  dark:text-white">
+            <h1 className="text-black font-semibold font-Inter text-[20px] mb-[10px] mt-[16px] leading-tight dark:text-white">
               {name}
             </h1>
-            <p className="dark:text-[#A3B3BC] text-[#5B6478] font-light leading-normal font-Inter text-[16px] mb-[16px]">
+            <p className="dark:text-[#A3B3BC] text-[#5B6478] font-light md:leading-[1.2] lg:leading-[1.15] xl:leading-normal font-Inter text-[15px] mb-[16px] md:text-[15px] xl:text-[16px]">
               {description}
             </p>
           </div>

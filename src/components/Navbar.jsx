@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 // import { FiMenu } from "@material-ui/core/Menu";
 import { Menu } from "@mui/material";
 import { FiMenu } from "react-icons/fi";
+import logo from "../assets/logo.png";
 
 // import toast from "react-hot-toast";
 
@@ -12,12 +13,13 @@ const Navbar = () => {
 
   return (
     <div className="bg-gradient-to-r from-[#16154d] to-[#421779]">
-      <div className="w-full px-6 py-3 flex items-center justify-between bg-pattern">
+      <div className="w-full px-6 py-3 flex items-center justify-between">
         <div className="flex justify-start items-center ">
           <Link to="/">
-            <p className="text-[24px] text-white font-bold font-Space">
+            {/* <p className="text-[24px] text-white font-bold font-Space">
               Designers Lobby
-            </p>
+            </p> */}
+            <img src={logo} alt="DesignersLobby Logo" className="w-full" />
           </Link>
         </div>
         <div className="lg:flex md:flex xl:flex flex-auto items-center justify-center md:space-x-6 hidden">
@@ -26,7 +28,7 @@ const Navbar = () => {
               Home
             </p>
           </Link>
-          <Link to="/">
+          <Link to="/how-it-works">
             <p className="text-[18px] text-white continuous-line  font-medium font-Space">
               How it works
             </p>
@@ -66,35 +68,35 @@ const Navbar = () => {
       </div>
       {showNav && (
         <div className="flex lg:hidden xl:hidden md:hidden flex-col w-full text-center mt-3 p-[16px]">
-          <Link to="">
+          <Link to="/" onClick={() => setShowNav(!showNav)}>
             <p className="p-2 w-full flex items-center justify-center border border-[#764dff] rounded-md my-[3px]">
               <h3 className="font-bold continuous-line text-center text-white">
                 Home
               </h3>
             </p>
           </Link>
-          <Link to="">
+          <Link to="/how-it-works" onClick={() => setShowNav(!showNav)}>
             <p className="p-2 w-full flex items-center justify-center border border-[#764dff] rounded-md my-[3px]">
               <h3 className="font-bold continuous-line text-center text-white">
                 How it works
               </h3>
             </p>
           </Link>
-          <Link to="">
+          <Link to="/contributors" onClick={() => setShowNav(!showNav)}>
             <p className="p-2 w-full flex items-center justify-center border border-[#764dff] rounded-md my-[3px]">
               <h3 className="font-bold continuous-line text-center text-white">
                 Contributors
               </h3>
             </p>
           </Link>
-          <Link to="">
+          <Link to="/newresource" onClick={() => setShowNav(!showNav)}>
             <p className="p-2 w-full flex items-center justify-center border border-[#764dff] rounded-md my-[3px]">
               <h3 className="font-bold continuous-line text-center text-white">
                 New Resource
               </h3>
             </p>
           </Link>
-          <Link to="">
+          <Link to="/newsletter" onClick={() => setShowNav(!showNav)}>
             <p className="p-2 w-full flex items-center justify-center border border-[#764dff] rounded-md my-[3px]">
               <h3 className="font-bold continuous-line text-center text-white">
                 Newsletter
