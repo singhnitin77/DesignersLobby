@@ -1,23 +1,53 @@
 import axios from "axios";
 import React, { useState } from "react";
 import newsletter from "../assets/newsletter.png";
+import toast, { Toaster } from "react-hot-toast";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
+
+  const is_email = (str) => {
+    var pattern = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    return pattern.test(str);
+  };
+
   //   Submit event
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const res = await axios.post("/email/newsletter", {
         email: email,
       });
       console.log(res);
+
+      toast.success("Successfully Subscribed", { icon: "🥳" });
+
+      // Setting the email to default
+      setEmail("");
     } catch (error) {
       console.log(error);
+      toast.error("Something went wrong", { icon: "😥" });
     }
   };
   return (
     <div className="w-full h-full flex flex-col md:flex-row px-[35px] py-[40px] md:px-[60px] md:py-[60px] bg-background-4 bg-cover bg-no-repeat bg-center">
+      <Toaster
+        toastOptions={{
+          // Define default options
+          // className: "",
+          // duration: 5000,
+          style: {
+            // background: "#363636",
+            // color: "#fff",
+          },
+
+          // Default options for specific types
+          success: {
+            duration: 3000,
+          },
+        }}
+      />
       <div className="flex flex-1 justify-center items-start flex-col mr-[50px]">
         <h1 className="text-[28px] md:text-[30px] lg:text-[40px] xl:text-[40px] font-Inter font-bold mb-[16px]  animate__animated animate__fadeInUp hero-heading-gradient">
           5 Fresh Design Resources Weekly
@@ -41,6 +71,8 @@ const Newsletter = () => {
               className="w-[90%]  md:w-[70%] py-[12px] px-[16px] border border-gray-300 rounded-md placeholder:font-Inter placeholder:font-light focus:outline-none focus:shadow-outline shadow appearance-none font-Inter"
               placeholder="Enter your email address"
               onChange={(e) => setEmail(e.target.value)}
+              required
+              value={email}
             />
             <div className="md:mt-[32px] mt-[20px]">
               <button
