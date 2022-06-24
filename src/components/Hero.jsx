@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { Button, IconButton } from "@mui/material";
 import heroimage from "../assets/heroimage.png";
-import { Features, How_works, MainCategories } from "../containers";
+import {
+  Features,
+  How_works,
+  MainCategories,
+  Trendingtools,
+} from "../containers";
 import NavHeader from "./NavHeader";
 
 const Hero = () => {
@@ -59,8 +64,7 @@ const Hero = () => {
           <img className="w-[90%] heroimg-animation" src={heroimage} alt="" />
         </div>
       </div>
-      <Features />
-      <How_works />
+      <Trendingtools />
       <NavHeader setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
       <MainCategories searchTerm={searchTerm} />
     </>

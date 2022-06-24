@@ -17,7 +17,7 @@ const Newsletter = () => {
     }
   };
   return (
-    <div className="w-full h-full flex flex-col md:flex-row px-[60px] py-[60px] bg-background-4 bg-cover bg-no-repeat bg-center">
+    <div className="w-full h-full flex flex-col md:flex-row px-[35px] py-[40px] md:px-[60px] md:py-[60px] bg-background-4 bg-cover bg-no-repeat bg-center">
       <div className="flex flex-1 justify-center items-start flex-col mr-[50px]">
         <h1 className="text-[28px] md:text-[30px] lg:text-[40px] xl:text-[40px] font-Inter font-bold mb-[16px]  animate__animated animate__fadeInUp hero-heading-gradient">
           5 Fresh Design Resources Weekly

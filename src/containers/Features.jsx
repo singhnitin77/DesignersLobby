@@ -102,7 +102,7 @@ const Features = () => {
   ); */
 
   return (
-    <div className="bg-gradient-to-l from-[#16154d] to-[#421779] py-[48px]">
+    <div className="bg-gradient-to-br from-[#16154d] to-[#421779] md:py-[96px] py-[48px]">
       <div className="h-auto w-full flex items-center justify-center p-7">
         <div className="h-auto min-h-[80vh] w-full rounded-md bg-[rgba(0,0,0,0.6)] bg-black flex items-center justify-center flex-wrap border border-[#b84f90] py-[48px] overflow-x-hidden">
           <div className="flex items-center justify-between">

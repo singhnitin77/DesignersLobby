@@ -12,8 +12,8 @@ const MainCategories = ({ searchTerm }) => {
   }
 
   return (
-    <div className="w-full px-[80px] py-[80px] white-light-shadow dark:bg-[#2F2F2F] bg-[#ECF2F5] overflow-hidden">
-      <div className="w-full grid grid-cols-4 gap-x-[40px] gap-y-[48px]">
+    <div className="w-full px-[35px] py-[40px] md:px-[80px] md:py-[80px] white-light-shadow dark:bg-[#2F2F2F] bg-[#ECF2F5] overflow-hidden">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[40px] gap-y-[48px]">
         {SubCategory.data
           .filter((val) => {
             if (searchTerm === "") {

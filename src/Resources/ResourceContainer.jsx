@@ -7,7 +7,7 @@ const ResourceContainer = ({ searchTerm }) => {
 
   return (
     <>
-      <div className="grid grid-cols-4 gap-x-[40px] gap-y-[48px] px-[60px]">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[40px] gap-y-[48px]">
         {resource.data
           .filter((val) => {
             if (searchTerm === "") {

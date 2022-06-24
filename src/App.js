@@ -29,6 +29,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Hero />} />
               <Route path="contributors" element={<Contributors />} />
+              <Route path="how-it-works" element={<How_works />} />
 
               <Route path="category/:categories" element={<Categories />} />
               {/* <Route path=":categories" element={<Categories />} /> */}
