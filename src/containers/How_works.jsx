@@ -4,11 +4,11 @@ import { Features } from "./";
 const how_works = () => {
   return (
     <>
-      <div className="w-full px-[35px] py-[40px] md:px-[60px] md:py-[72px] lg:py-[96px] dark:bg-[#0D1117] bg-[#F5F9FF]">
+      <div className="w-full px-[35px] py-[40px] md:px-[60px] md:py-[80px] lg:py-[96px] dark:bg-[#0D1117] bg-[#F5F9FF]">
         <h1 className="text-[30px] lg:text-[36px] xl:text-[36x]  dark:text-white text-black font-semibold font-Space text-center mb-[24px]">
           How it Works
         </h1>
-        <div className="w-[80vw] mx-auto mb-[64px]">
+        <div className="w-[80vw] mx-auto mb-[96px]">
           <h3 className="text-gradient-how-it-works leading-[1.15] text-[36px] md:text-[44px] lg:text-[54px] font-semibold font-Inter text-center mb-[16px]">
             Discover Best Design Resources & Tools
           </h3>
