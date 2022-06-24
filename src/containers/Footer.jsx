@@ -1,30 +1,47 @@
 import React from "react";
 import { TwtBtn, CoffeeButton } from "../components";
+import { FaInstagram } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div className="bg-gradient-to-r from-[#16154d] to-[#421779]">
-      <div className="w-full px-[30px] py-[30px] border-t border-[#b84f90] glassmorphism bg-pattern">
-        <div className="flex items-center justify-center mb-[14px]">
-          <h3 className="font-Space text-[20px] text-white font-bold">
-            App built by{" "}
+      <div className="w-full px-[30px] py-[30px] border-t border-[#b84f90] glassmorphism">
+        <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-between gap-y-[16px]">
+          <h3 className="text-white font-normal font-Inter">
+            Built by{" "}
             <a
-              className="font-Space border-b-2 hover:text-[#f5ba32] border-[#f5ba32]"
-              href="https://www.thenitinsingh.com/"
+              className="font-bold continuous-line text-[#F5BA32]"
+              href="http://thenitinsingh.com"
               target="_blank"
+              rel="noreferrer"
             >
               Nitin Singh
+            </a>{" "}
+            and{" "}
+            <Link to="/contributors">
+              <a className="font-bold continuous-line text-[#F5BA32]">
+                Friends
+              </a>
+            </Link>
+          </h3>
+          <a
+            href=""
+            className="font-Inter font-semibold text-[16px] text-white"
+          >
+            thedesignerslobby@gmail.com
+          </a>
+          {/* <div className="flex">
+            <a href="#" className="">
+              <FaInstagram className="text-white text-[32px]" />
             </a>
-          </h3>
-        </div>
-        <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-between">
-          <h3 className="text-[18px] font-Inter font-semibold text-white">
-            Copyright &copy; 2022 DesignHouse
-          </h3>
-          <p className="text-[18px] font-Inter  font-semibold text-white">
-            thenitinsingh77@gmail.com
-          </p>
-          <div className="md:flex hidden flex-row items-center justify-between">
+            <a href="#" className="">
+              <FiMail className="text-white text-[32px]" />
+            </a>
+          </div> */}
+
+          <div className="flex flex-row items-center justify-between">
             <div className="lg:ml-1 xl:ml-1 mt-2 xl:mt-0 lg:mt-0">
               <CoffeeButton />
             </div>

@@ -6,3 +6,4 @@ export { default as NewResource } from "./NewResource";
 export { default as Category } from "./Category";
 export { default as Categories } from "./Categories";
 export { default as MainCategories } from "./MainCategories";
+export { default as Trendingtools } from "./Trendingtools";
