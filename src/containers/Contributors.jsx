@@ -82,14 +82,12 @@ const Contributors = () => {
 
   const resourcecontributors = [
     {
-      name: "Nitin Singh",
+      name: "Vishal",
     },
     {
       name: "Aditya Singh",
     },
-    {
-      name: "Tanish",
-    },
+
     {
       name: "Sagar Bhan",
     },
@@ -103,7 +101,10 @@ const Contributors = () => {
       name: "Manish Kumar",
     },
     {
-      name: "Prashant Kumar",
+      name: "Aditya Rawat",
+    },
+    {
+      name: "Tamish Bajaj",
     },
   ];
 
@@ -115,8 +116,8 @@ const Contributors = () => {
       </h1>
       <ContributeBanner
         // text="Contributors"
-        description="A big thanks to all contributors who helped Design House grow and help
-          many! Thank you! Keep helps us grow!"
+        description="Designer's Lobby is empowered by various contributors who have compiled the highest quality resources.
+A big thanks to all the contributors who helped Designers Lobby and the Design community grow! Thank you! We thank all of them wholeheartedly."
       />
 
       <div className="flex justify-center w-full ">

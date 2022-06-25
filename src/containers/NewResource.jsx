@@ -124,10 +124,14 @@ const NewResource = () => {
           },
         }}
       />
-      <div className="h-full min-h-screen text-[#ecf2f5] w-full flex items-center justify-center flex-col ">
-        <h1 className="text-2xl md:text-4xl lg:text-4xl xl:text-4xl font-bold mb-[32px] lg:mb-[32px] xl:mb-[32px]  text-center font-Space hero-heading-gradient font-Inter">
+      <div className="min-h-screen text-[#ecf2f5] w-full flex items-center justify-center flex-col ">
+        <h1 className="text-2xl md:text-4xl lg:text-4xl xl:text-4xl font-bold mb-[16px] lg:mb-[16px] xl:mb-[16px]  text-center font-Space hero-heading-gradient font-Inter">
           Suggest a New Resource
         </h1>
+        <p className="text-[18px] lg:text-[24px] font-semibold text-center font-Inter hero-heading-gradient mb-[32px]">
+          Help Designers Lobby provide better and more beautiful content by
+          suggesting new & trending design resources.
+        </p>
         <div className="w-full lg:w-7/12 xl:w-7/12 h-full bg-white rounded-xl m-1 new-resource-glass">
           <form
             className="bg-transparent rounded-xl h-full px-8 pt-8 pb-8 mb-4"
@@ -143,7 +147,7 @@ const NewResource = () => {
               <input
                 type="text"
                 className="shadow appearance-none border font-Inter rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-[#868e96] placeholder:font-Inter"
-                placeholder="Sally Illustrations Set"
+                placeholder="Amritpal Toy Faces Library"
                 value={resource_name}
                 onChange={handleChange("resource_name")}
               />
@@ -162,7 +166,7 @@ const NewResource = () => {
               >
                 <input
                   className="appearance-none font-Inter rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-[#868e96] placeholder:font-Inter"
-                  placeholder="http://webflow.com/"
+                  placeholder="https://amritpaldesign.com/toy-faces"
                   value={resource_link}
                   onChange={handleChange("resource_link")}
                 />
@@ -204,7 +208,7 @@ const NewResource = () => {
               <input
                 type="text"
                 className="shadow appearance-none border font-Inter rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-[#868e96] placeholder:font-Inter"
-                placeholder="Nitin Singh"
+                placeholder="John Doe"
                 value={full_name}
                 onChange={handleChange("full_name")}
               />

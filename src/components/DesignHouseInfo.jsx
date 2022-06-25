@@ -13,11 +13,12 @@ const DesignHouseInfo = () => {
           </h2>
         </Link>
         <p className="text-[18px] font-Inter font-medium text-white w-10/12 lg:w-7/12 text-center mb-[32px] animate__animated animate__fadeInUp hero-heading-gradient">
-          Introducing Design House, the all in one storehouse for developer
-          cheatsheets. Code House is made up of 300+ curated cheatsheets from
-          230+ sources. Filter by categories, or source sort by time or
-          popularity, dark mode, add new cheatsheets, features requests, top
-          cheatsheet hunter, make the app much more amazing!
+          Introducing Designers Lobby, a growing collection of 1200+ design
+          resources and tools with over 60 categories. Updated weekly for the
+          community with fresh resources. We aim to help high-performance design
+          teams, developers, content creators, and freelancers. Add new
+          resources, filter by categories, filter by search, dark mode, and
+          newsletter feature.
         </p>
         <div className="flex flex-wrap flex-col items-center justify-center md:flex-row animate__animated animate__fadeInUp">
           <a href="">

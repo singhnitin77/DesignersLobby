@@ -48,13 +48,13 @@ const Newsletter = () => {
           },
         }}
       />
-      <div className="flex flex-1 justify-center items-start flex-col mr-[50px]">
+      <div className="flex flex-1 justify-center items-start flex-col ">
         <h1 className="text-[28px] md:text-[30px] lg:text-[40px] xl:text-[40px] font-Inter font-bold mb-[16px]  animate__animated animate__fadeInUp hero-heading-gradient">
-          5 Fresh Design Resources Weekly
+          Never Miss Out on a New Resource.
         </h1>
         <p className="text-[20px] md:text-[24px] lg:text-[28px] xl:text-[28px] font-Inter font-medium mb-[24px] md:mb-[32px]  animate__animated animate__fadeInUp leading-[1.25] hero-heading-gradient">
-          Get our minimal and beautiful newsletter straight to your inbox every
-          Tuesday.
+          Subscribe to our minimal and beautiful newsletter to get 5 fresh
+          resources straight to your inbox.
         </p>
         <form
           className="w-full animate__animated animate__fadeInUp"
