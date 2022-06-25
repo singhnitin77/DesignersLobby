@@ -9,7 +9,7 @@ const DesignHouseInfo = () => {
       <div className="w-full text-center flex items-center md:items-center lg:items-center xl:items-center justify-center flex-col py-12 pl-5 lg:pl-0 xl:pl-0">
         <Link to="/">
           <h2 className="text-[38px] md:text-[40px] lg:text-[44px] text-center font-Inter font-bold mb-[24px] animate__animated animate__fadeInUp hero-heading-gradient">
-            Design House
+            Designers Lobby
           </h2>
         </Link>
         <p className="text-[18px] font-Inter font-medium text-white w-10/12 lg:w-7/12 text-center mb-[32px] animate__animated animate__fadeInUp hero-heading-gradient">
