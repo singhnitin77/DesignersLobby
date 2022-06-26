@@ -1,95 +1,47 @@
 import React from "react";
-import DesignHouseInfo from "../components/DesignHouseInfo";
+import DesignserLobbyBanner from "../components/DesignserLobbyBanner";
 import ContributeCard from "../components/ContributeCard";
 import { ContributeBanner, ResourceContributors } from "../components";
-
-// const Contributors = () => {
-//   contributordata = [
-//     {
-//       name: "Nitin Singh",
-//       link: "github.com/singhnitin77",
-//     },
-//     {
-//       name: "Nitin Singh",
-//       link: "github.com/singhnitin77",
-//     },
-//     {
-//       name: "Nitin Singh",
-//       link: "github.com/singhnitin77",
-//     },
-//   ];
-//   return (
-//     <div className="bg-[#ecf2f5] h-full w-full overflow-visible min-h-screen pb-10">
-//       <DesignHouseInfo />
-//       <div className="flex flex-col items-center justify-center">
-//         <h1 className="text-[30px] font-semibold font-Space text-center mb-[24px]">
-//           Contributors
-//         </h1>
-//         <p>
-//           A big thanks to all contributors who helped code house grow and help
-//           many! Thank you! Keep helps us grow!
-//         </p>
-//         <div className="flex justify-center w-full">
-//           <div className="w-10/12 py-2">
-//             <div className="w-full flex px-3 my-2 mt-3 items-center">
-//               <div className="w-1/12 h-[1px] rounded-sm bg-[#ddd]"></div>
-//               <h3 className="mx-2 text-[#555] capitalize font-bold text-lg w-auto">
-//                 Github Contributors
-//               </h3>
-//               <div className="w-8/12 h-[1px] rounded-sm bg-[#ddd]"></div>
-//             </div>
-//             <div className="grid grid-cols-4">
-//               {contributordata.map((person, i) => {
-//                 return (
-//                   <ContributeCard
-//                     name={person.name}
-//                     link={person.link}
-//                     key={i}
-//                   />
-//                 );
-//               })}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Contributors;
 
 const Contributors = () => {
   const contributordata = [
     {
       image: "https://avatars.githubusercontent.com/u/77439529?v=4",
       name: "Nitin Singh",
-      link: "github.com/singhnitin77",
+      github_link: "github.com/singhnitin77",
       work: "Front-End & UI/UX",
+      email: "mailto:thenitinsingh77@gmail.com",
+      insta_link: "https://www.instagram.com/thenitinsingh7/",
+      website_link: "https://www.thenitinsingh.com/",
     },
     {
       image: "https://avatars.githubusercontent.com/u/77439529?v=4",
       name: "Bharat Kumar",
-      link: "github.com/singhnitin77",
-      work: "Backend Dev",
+      github_link: "https://github.com/Bharat-kr",
+      work: "Front-End & UI/UX",
+      email: "mailto: kumarbharat661@gmail.com",
+      insta_link: "https://www.instagram.com/bharatkr_15/",
+      website_link: "https://bharat-kr.github.io/Profile/",
     },
     {
       image: "https://avatars.githubusercontent.com/u/77439529?v=4",
-      name: "Prashant Kumar",
-      link: "github.com/singhnitin77",
-      work: "BackEnd Data",
+      name: "Prashant kumar",
+      github_link: "https://github.com/devprashantt",
+      work: "Front-End & UI/UX",
+      email: "mailto:officialprashanttt@gmail.com",
+      insta_link: "https://www.instagram.com/king11prashant11/",
+      website_link: "https://powerful-waters-77913.herokuapp.com/",
     },
   ];
 
   const resourcecontributors = [
     {
-      name: "Nitin Singh",
+      name: "Vishal",
     },
     {
       name: "Aditya Singh",
     },
-    {
-      name: "Tanish",
-    },
+
     {
       name: "Sagar Bhan",
     },
@@ -103,30 +55,33 @@ const Contributors = () => {
       name: "Manish Kumar",
     },
     {
-      name: "Prashant Kumar",
+      name: "Aditya Rawat",
+    },
+    {
+      name: "Tamish Bajaj",
     },
   ];
 
   return (
     <div className="bg-[#F5F9FF] w-full min-h-screen pb-10 dark:bg-[#2F2F2F] overflow-x-hidden">
-      <DesignHouseInfo />
+      <DesignserLobbyBanner />
       <h1 className="text-[32px] text-gradient-how-it-works font-bold md:text-[36px] lg:text-[44px] my-[24px] flex items-center justify-center">
         Contributors
       </h1>
       <ContributeBanner
         // text="Contributors"
-        description="A big thanks to all contributors who helped Design House grow and help
-          many! Thank you! Keep helps us grow!"
+        description="Designer's Lobby is empowered by various contributors who have compiled the highest quality resources.
+A big thanks to all the contributors who helped Designers Lobby and the Design community grow! Thank you! We thank all of them wholeheartedly."
       />
 
       <div className="flex justify-center w-full ">
         <div className="w-10/12 py-2">
           <div className="w-full flex px-3 my-2 mt-3 items-center">
-            <div className="w-5/12 h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
+            <div className="w-4/12 mx-auto h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
             <h3 className="mx-2 text-[#3d53ff] capitalize font-bold text-lg w-auto dark:text-white">
-              Design House built by
+              Designers Lobby built by
             </h3>
-            <div className="w-5/12 h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
+            <div className="w-4/12 mx-auto h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
           </div>
         </div>
       </div>
@@ -139,8 +94,11 @@ const Contributors = () => {
               <ContributeCard
                 image={person.image}
                 name={person.name}
-                link={person.link}
+                github_link={person.github_link}
                 work={person.work}
+                email={person.email}
+                website_link={person.website_link}
+                insta_link={person.insta_link}
                 key={i}
               />
             );
@@ -152,11 +110,11 @@ const Contributors = () => {
       <div className="flex justify-center w-full">
         <div className="w-10/12 py-2">
           <div className="w-full flex px-3 my-2 mt-3 items-center mb-[16px]">
-            <div className="w-5/12 h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
+            <div className="w-4/12 mx-auto h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
             <h3 className="mx-2 text-[#3d53ff] capitalize font-bold text-lg w-auto dark:text-white">
               Resource Contributors
             </h3>
-            <div className="w-5/12 h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
+            <div className="w-4/12 mx-auto h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
           </div>
         </div>
       </div>

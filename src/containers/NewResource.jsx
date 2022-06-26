@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-
+import toast, { Toaster } from "react-hot-toast";
 import { MenuItem, Select } from "@mui/material";
 import axios from "axios";
+import { FiCheck, FiX } from "react-icons/fi";
 
 const NewResource = () => {
   // Default values
@@ -12,10 +13,36 @@ const NewResource = () => {
     full_name: "",
   });
 
+  // regex to test whether url is valid or not
+  const is_url = (str) => {
+    var pattern = new RegExp(
+      "^" +
+        "(?:(?:https?|ftp)://)" +
+        "(?:\\S+(?::\\S*)?@)?" +
+        "(?:" +
+        "(?!(?:10|127)(?:\\.\\d{1,3}){3})" +
+        "(?!(?:169\\.254|192\\.168)(?:\\.\\d{1,3}){2})" +
+        "(?!172\\.(?:1[6-9]|2\\d|3[0-1])(?:\\.\\d{1,3}){2})" +
+        "(?:[1-9]\\d?|1\\d\\d|2[01]\\d|22[0-3])" +
+        "(?:\\.(?:1?\\d{1,2}|2[0-4]\\d|25[0-5])){2}" +
+        "(?:\\.(?:[1-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))" +
+        "|" +
+        "(?:(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)" +
+        "(?:\\.(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)*" +
+        "(?:\\.(?:[a-z\\u00a1-\\uffff]{2,}))" +
+        ")" +
+        "(?::\\d{2,5})?" +
+        "(?:/\\S*)?" +
+        "$",
+      "i"
+    );
+    return pattern.test(str);
+  };
+
   //   destructuring values
   const { resource_name, resource_link, category, full_name } = values;
 
-  // handleChange
+  // handleChange for Input Values
   const handleChange = (name) => (event) => {
     setValues({ ...values, [name]: event.target.value });
   };
@@ -24,16 +51,34 @@ const NewResource = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(resource_name, resource_link, category, full_name);
-    try {
-      const res = await axios.post("/email", {
-        resourceName: resource_name,
-        resourceLink: resource_link,
-        category: category,
-        name: full_name,
-      });
-      console.log(res);
-    } catch (error) {
-      console.log(error);
+
+    if (is_url(resource_link)) {
+      try {
+        const res = await axios.post("/email", {
+          resourceName: resource_name,
+          resourceLink: resource_link,
+          category: category,
+          name: full_name,
+        });
+
+        console.log(res);
+
+        // React Toast
+        toast.success("Successfully Submitted!");
+
+        // Making State variable default value after submittion
+        setValues({
+          resource_name: "",
+          resource_link: "",
+          category: "Illustrations",
+          full_name: "",
+        });
+      } catch (error) {
+        console.log(error);
+        toast.error("Something went wrong");
+      }
+    } else {
+      toast.error("Resource link is not valid!");
     }
   };
 
@@ -59,10 +104,34 @@ const NewResource = () => {
   return (
     <div className="bg-background-4 bg-cover bg-no-repeat bg-center px-[35px] md:px-[60px] md:py-[60px] ">
       {/* // <div className="w-full h-full bg-[#831C6E]"> */}
-      <div className="h-full min-h-screen text-[#ecf2f5] w-full flex items-center justify-center flex-col ">
-        <h1 className="text-2xl md:text-4xl lg:text-4xl xl:text-4xl font-bold mb-[32px] lg:mb-[32px] xl:mb-[32px]  text-center font-Space hero-heading-gradient font-Inter">
+      <Toaster
+        toastOptions={{
+          // Define default options
+          // className: "",
+          // duration: 5000,
+          style: {
+            // background: "#363636",
+            // color: "#fff",
+          },
+
+          // Default options for specific types
+          success: {
+            duration: 3000,
+          },
+
+          error: {
+            duration: 3000,
+          },
+        }}
+      />
+      <div className="min-h-screen text-[#ecf2f5] w-full flex items-center justify-center flex-col ">
+        <h1 className="text-2xl md:text-4xl lg:text-4xl xl:text-4xl font-bold mb-[16px] lg:mb-[16px] xl:mb-[16px]  text-center font-Space hero-heading-gradient font-Inter">
           Suggest a New Resource
         </h1>
+        <p className="text-[18px] lg:text-[24px] font-semibold text-center font-Inter hero-heading-gradient mb-[32px]">
+          Help Designers Lobby provide better and more beautiful content by
+          suggesting new & trending design resources.
+        </p>
         <div className="w-full lg:w-7/12 xl:w-7/12 h-full bg-white rounded-xl m-1 new-resource-glass">
           <form
             className="bg-transparent rounded-xl h-full px-8 pt-8 pb-8 mb-4"
@@ -78,7 +147,7 @@ const NewResource = () => {
               <input
                 type="text"
                 className="shadow appearance-none border font-Inter rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-[#868e96] placeholder:font-Inter"
-                placeholder="Sally Illustrations Set"
+                placeholder="Amritpal Toy Faces Library"
                 value={resource_name}
                 onChange={handleChange("resource_name")}
               />
@@ -90,12 +159,23 @@ const NewResource = () => {
               >
                 Resoure Link
               </label>
-              <input
-                className="shadow appearance-none font-Inter border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-[#868e96] placeholder:font-Inter"
-                placeholder="http://webflow.com/"
-                value={resource_link}
-                onChange={handleChange("resource_link")}
-              />
+              <div
+                className={`flex border-[1.75px] mb-3 rounded-md bg-white items-center ${
+                  is_url(resource_link) ? "border-green-500" : "border-red-500"
+                }`}
+              >
+                <input
+                  className="appearance-none font-Inter rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-[#868e96] placeholder:font-Inter"
+                  placeholder="https://amritpaldesign.com/toy-faces"
+                  value={resource_link}
+                  onChange={handleChange("resource_link")}
+                />
+                {is_url(resource_link) ? (
+                  <FiCheck className="text-green-500 text-2xl mr-2" />
+                ) : (
+                  <FiX className="text-red-500 text-2xl mr-2" />
+                )}
+              </div>
             </div>
             <div className="mb-6">
               <label
@@ -126,10 +206,9 @@ const NewResource = () => {
                 Your Full Name
               </label>
               <input
-                required
                 type="text"
                 className="shadow appearance-none border font-Inter rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-[#868e96] placeholder:font-Inter"
-                placeholder="Nitin Singh"
+                placeholder="John Doe"
                 value={full_name}
                 onChange={handleChange("full_name")}
               />

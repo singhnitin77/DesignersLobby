@@ -12,8 +12,9 @@ const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
 
   return (
-    <div className="bg-gradient-to-r from-[#16154d] to-[#421779]">
-      <div className="w-full px-6 py-3 flex items-center justify-between">
+    // gradient-to-r from-[#16154d] to-
+    <div className="bg-[#421779]">
+      <div className="w-full px-6 py-3 flex items-center justify-between glassmorphism">
         <div className="flex justify-start items-center ">
           <Link to="/">
             {/* <p className="text-[24px] text-white font-bold font-Space">

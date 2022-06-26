@@ -28,7 +28,10 @@ const NavHeader = ({ searchTerm, setSearchTerm }) => {
   };
 
   return (
-    <div className="w-full px-[40px] py-[30px] bg-white white-light-shadow flex items-center justify-center flex-col-reverse xl:justify-between lg:flex-row xl-flex-row dark:bg-[#0D1117] border-slate-800">
+    <div
+      className="w-full px-[40px] py-[30px] bg-white white-light-shadow flex items-center justify-center flex-col-reverse xl:justify-between lg:flex-row xl-flex-row dark:bg-[#0D1117] border-slate-800"
+      id="nav-header"
+    >
       <div className="flex items-center w-full lg:w-5/12 xl:w-5/12 justify-center lg:justify-start xl:justify-start mt-2 xl:mt-0 lg:mt-0">
         <button onClick={toggleDrawer}>
           <div className="border border-[#ddd] hover:border-[#3d5eff] text-[#3d5eff] duration-300 px-3 lg:px-5 py-[10px] text-[16px] lg:text-[20px] capitalize rounded-lg flex items-center justify-center font-Inter font-semibold dark:text-white dark:border-[#555]">

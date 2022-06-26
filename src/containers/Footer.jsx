@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="bg-gradient-to-r from-[#16154d] to-[#421779]">
-      <div className="w-full px-[30px] py-[30px] border-t border-[#b84f90] glassmorphism">
+      <div className="w-full px-[30px] py-[30px] border-t border-[#b84f90] footer-glassmorphism">
         <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-between gap-y-[16px]">
           <h3 className="text-white font-normal font-Inter">
             Built by{" "}
@@ -27,19 +27,11 @@ const Footer = () => {
             </Link>
           </h3>
           <a
-            href=""
+            href="mailto:thedesignerslobby@gmail.com"
             className="font-Inter font-semibold text-[16px] text-white"
           >
             thedesignerslobby@gmail.com
           </a>
-          {/* <div className="flex">
-            <a href="#" className="">
-              <FaInstagram className="text-white text-[32px]" />
-            </a>
-            <a href="#" className="">
-              <FiMail className="text-white text-[32px]" />
-            </a>
-          </div> */}
 
           <div className="flex flex-row items-center justify-between">
             <div className="lg:ml-1 xl:ml-1 mt-2 xl:mt-0 lg:mt-0">

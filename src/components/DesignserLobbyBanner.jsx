@@ -1,23 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CoffeeButton, TwtBtn } from "./";
+import { CoffeeButton, TwtBtn } from ".";
 import { FiBookOpen } from "react-icons/fi";
 
-const DesignHouseInfo = () => {
+const DesignserLobbyBanner = () => {
   return (
     <div className="bg-cover bg-no-repeat bg-center bg-background-4">
       <div className="w-full text-center flex items-center md:items-center lg:items-center xl:items-center justify-center flex-col py-12 pl-5 lg:pl-0 xl:pl-0">
         <Link to="/">
           <h2 className="text-[38px] md:text-[40px] lg:text-[44px] text-center font-Inter font-bold mb-[24px] animate__animated animate__fadeInUp hero-heading-gradient">
-            Design House
+            Designers Lobby
           </h2>
         </Link>
         <p className="text-[18px] font-Inter font-medium text-white w-10/12 lg:w-7/12 text-center mb-[32px] animate__animated animate__fadeInUp hero-heading-gradient">
-          Introducing Design House, the all in one storehouse for developer
-          cheatsheets. Code House is made up of 300+ curated cheatsheets from
-          230+ sources. Filter by categories, or source sort by time or
-          popularity, dark mode, add new cheatsheets, features requests, top
-          cheatsheet hunter, make the app much more amazing!
+          Introducing Designers Lobby, a growing collection of 1200+ design
+          resources and tools with over 60 categories. Updated weekly for the
+          community with fresh resources. We aim to help high-performance design
+          teams, developers, content creators, and freelancers. Add new
+          resources, filter by categories, filter by search, dark mode, and
+          newsletter feature.
         </p>
         <div className="flex flex-wrap flex-col items-center justify-center md:flex-row animate__animated animate__fadeInUp">
           <a href="">
@@ -38,4 +39,4 @@ const DesignHouseInfo = () => {
   );
 };
 
-export default DesignHouseInfo;
+export default DesignserLobbyBanner;
