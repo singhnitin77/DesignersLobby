@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row px-[40px] py-[60px] bg-cover bg-no-repeat bg-center bg-background-4 overflow-hidden">
+      <div className="flex flex-col md:flex-row px-[40px] pt-[60px] pb-[80px] hero-gradient overflow-hidden">
         <div className="flex flex-1 justify-center items-start flex-col mr-[50px] animate__animated animate__fadeInLeft">
           <h1 className="font-Inter leading-[1.1] text-[36px] md:text-[44px] lg:text-[54px] xl:text-[54px] hero-heading-gradient font-bold ">
             The Best place for designers around the web

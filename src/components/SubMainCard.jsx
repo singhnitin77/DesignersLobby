@@ -20,7 +20,7 @@ const SubMainCard = ({ image, name, description, category_name, link }) => {
           <h1 className="text-black font-semibold font-Inter leading-tight text-[20px] mb-[10px] mt-[16px] leading-2  dark:text-white">
             {name}
           </h1>
-          <p className="dark:text-[#A3B3BC] text-[#5B6478]  md:leading-[1.2] lg:leading-[1.2] xl:leading-normal font-Inter text-[15px] mb-[16px] md:text-[15px] xl:text-[16px]">
+          <p className="dark:text-[#A3B3BC] text-[#5B6478]  md:leading-[1.2] lg:leading-[1.2] xl:leading-[1.3] font-Inter text-[15px] mb-[16px] md:text-[15px] xl:text-[16px] lg:text-[15px]">
             {description}
           </p>
         </div>

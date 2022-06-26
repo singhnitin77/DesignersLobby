@@ -63,20 +63,29 @@ const Contributors = () => {
     {
       image: "https://avatars.githubusercontent.com/u/77439529?v=4",
       name: "Nitin Singh",
-      link: "github.com/singhnitin77",
+      github_link: "github.com/singhnitin77",
       work: "Front-End & UI/UX",
+      email: "mailto:thenitinsingh77@gmail.com",
+      insta_link: "https://www.instagram.com/thenitinsingh7/",
+      website_link: "https://www.thenitinsingh.com/",
     },
     {
       image: "https://avatars.githubusercontent.com/u/77439529?v=4",
       name: "Bharat Kumar",
-      link: "github.com/singhnitin77",
-      work: "Backend Dev",
+      github_link: "https://github.com/Bharat-kr",
+      work: "Front-End & UI/UX",
+      email: "mailto: kumarbharat661@gmail.com",
+      insta_link: "https://www.instagram.com/bharatkr_15/",
+      website_link: "https://bharat-kr.github.io/Profile/",
     },
     {
       image: "https://avatars.githubusercontent.com/u/77439529?v=4",
-      name: "Prashant Kumar",
-      link: "github.com/singhnitin77",
-      work: "BackEnd Data",
+      name: "Prashant kumar",
+      github_link: "https://github.com/devprashantt",
+      work: "Front-End & UI/UX",
+      email: "mailto:officialprashanttt@gmail.com",
+      insta_link: "https://www.instagram.com/king11prashant11/",
+      website_link: "https://powerful-waters-77913.herokuapp.com/",
     },
   ];
 
@@ -123,11 +132,11 @@ A big thanks to all the contributors who helped Designers Lobby and the Design c
       <div className="flex justify-center w-full ">
         <div className="w-10/12 py-2">
           <div className="w-full flex px-3 my-2 mt-3 items-center">
-            <div className="w-5/12 h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
+            <div className="w-4/12 mx-auto h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
             <h3 className="mx-2 text-[#3d53ff] capitalize font-bold text-lg w-auto dark:text-white">
-              Design House built by
+              Designers Lobby built by
             </h3>
-            <div className="w-5/12 h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
+            <div className="w-4/12 mx-auto h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
           </div>
         </div>
       </div>
@@ -140,8 +149,11 @@ A big thanks to all the contributors who helped Designers Lobby and the Design c
               <ContributeCard
                 image={person.image}
                 name={person.name}
-                link={person.link}
+                github_link={person.github_link}
                 work={person.work}
+                email={person.email}
+                website_link={person.website_link}
+                insta_link={person.insta_link}
                 key={i}
               />
             );
@@ -153,11 +165,11 @@ A big thanks to all the contributors who helped Designers Lobby and the Design c
       <div className="flex justify-center w-full">
         <div className="w-10/12 py-2">
           <div className="w-full flex px-3 my-2 mt-3 items-center mb-[16px]">
-            <div className="w-5/12 h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
+            <div className="w-4/12 mx-auto h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
             <h3 className="mx-2 text-[#3d53ff] capitalize font-bold text-lg w-auto dark:text-white">
               Resource Contributors
             </h3>
-            <div className="w-5/12 h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
+            <div className="w-4/12 mx-auto h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
           </div>
         </div>
       </div>

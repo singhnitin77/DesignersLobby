@@ -27,19 +27,11 @@ const Footer = () => {
             </Link>
           </h3>
           <a
-            href=""
+            href="mailto:thedesignerslobby@gmail.com"
             className="font-Inter font-semibold text-[16px] text-white"
           >
             thedesignerslobby@gmail.com
           </a>
-          {/* <div className="flex">
-            <a href="#" className="">
-              <FaInstagram className="text-white text-[32px]" />
-            </a>
-            <a href="#" className="">
-              <FiMail className="text-white text-[32px]" />
-            </a>
-          </div> */}
 
           <div className="flex flex-row items-center justify-between">
             <div className="lg:ml-1 xl:ml-1 mt-2 xl:mt-0 lg:mt-0">
