@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CoffeeButton, TwtBtn } from "./";
+import { CoffeeButton, TwtBtn } from ".";
 import { FiBookOpen } from "react-icons/fi";
 
-const DesignHouseInfo = () => {
+const DesignserLobbyBanner = () => {
   return (
     <div className="bg-cover bg-no-repeat bg-center bg-background-4">
       <div className="w-full text-center flex items-center md:items-center lg:items-center xl:items-center justify-center flex-col py-12 pl-5 lg:pl-0 xl:pl-0">
@@ -39,4 +39,4 @@ const DesignHouseInfo = () => {
   );
 };
 
-export default DesignHouseInfo;
+export default DesignserLobbyBanner;

@@ -3,7 +3,7 @@ export { default as Hero } from "./Hero";
 export { default as Feature_Card } from "./Feature_Card";
 export { default as NavHeader } from "./NavHeader";
 export { default as SearchBar } from "./SearchBar";
-export { default as DesignHouseInfo } from "./DesignHouseInfo";
+export { default as DesignserLobbyBanner } from "./DesignserLobbyBanner";
 export { default as ContributeCard } from "./ContributeCard";
 export { default as Sidebar } from "./Sidebar";
 export { default as SidebarCard } from "./SidebarCard";

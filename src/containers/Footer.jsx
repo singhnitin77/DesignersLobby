@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="bg-gradient-to-r from-[#16154d] to-[#421779]">
-      <div className="w-full px-[30px] py-[30px] border-t border-[#b84f90] glassmorphism">
+      <div className="w-full px-[30px] py-[30px] border-t border-[#b84f90] footer-glassmorphism">
         <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-between gap-y-[16px]">
           <h3 className="text-white font-normal font-Inter">
             Built by{" "}

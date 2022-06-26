@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import {
   CategoryHeader,
   Loader,
-  DesignHouseInfo,
+  DesignserLobbyBanner,
   NavHeader,
   BannerCard,
 } from "../components";
@@ -61,7 +61,7 @@ const Categories = ({}) => {
 
   return (
     <>
-      <DesignHouseInfo />
+      <DesignserLobbyBanner />
       <NavHeader searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
       <div className="w-full px-[35px] py-[40px] md:px-[80px] md:py-[80px] bg-[#F3F4FD] dark:bg-[#2f2f2f] overflow-hidden">
