@@ -6,7 +6,8 @@ import { AppProvider } from "./constants/Context";
 import App from "./App";
 import "./index.css";
 
-axios.defaults.baseURL = "http://localhost:8000";
+// axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "https://designers-lobby-backend.vercel.app/";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
