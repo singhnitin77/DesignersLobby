@@ -476,17 +476,11 @@
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
-// Card Animation hover
+/* Card Animation hover */
 @keyframes rotate {
   to {
     --angle: 360deg;
   }
-}
-
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
 }
 
 .animation-border {

@@ -1,8 +1,5 @@
 import React from "react";
 import { FiExternalLink } from "react-icons/fi";
-import { IKImage, IKContext } from "imagekitio-react";
-
-const urlEndpoint = "https://ik.imagekit.io/6djsamqli";
 
 // export default MainCard;
 const SubMainCard = ({ image, name, description, category_name, link }) => {
@@ -11,10 +8,7 @@ const SubMainCard = ({ image, name, description, category_name, link }) => {
       className="shadow-md bg-white hover:shadow-lg transition duration-300 rounded-[12px] cursor:pointer onhover:shadow-lg border-transparent dark:bg-[#1f1f1f] overflow-hidden"
       data-aos="fade-left"
     >
-      {/* <img className="w-full block" src={image} alt="" /> */}
-      <IKContext urlEndpoint={urlEndpoint}>
-        <IKImage src={image} className="w-full block" />
-      </IKContext>
+      <img className="w-full block" src={image} alt={name} />
       <div className="flex flex-col justify-between">
         <div className="flex flex-col px-[18px] justify-start items-start h-[170px]">
           <h1 className="text-black font-semibold font-Inter leading-tight text-[20px] mb-[10px] mt-[16px] leading-2  dark:text-white">
