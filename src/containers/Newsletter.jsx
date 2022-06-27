@@ -49,7 +49,7 @@ const Newsletter = () => {
         }}
       />
       <div className="flex flex-1 justify-center items-start flex-col ">
-        <h1 className="text-[28px] md:text-[30px] lg:text-[40px] xl:text-[40px] font-Inter font-bold mb-[16px]  animate__animated animate__fadeInUp hero-heading-gradient">
+        <h1 className="text-[28px] md:text-[30px] lg:text-[40px] xl:text-[40px] font-Inter font-bold mb-[16px]  animate__animated animate__fadeInUp hero-heading-gradient lg:leading-normal leading-[1.3]">
           Never Miss Out on a New Resource.
         </h1>
         <p className="text-[20px] md:text-[24px] lg:text-[28px] xl:text-[28px] font-Inter font-medium mb-[24px] md:mb-[32px]  animate__animated animate__fadeInUp leading-[1.25] hero-heading-gradient">

@@ -1,15 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Hero, Navbar, NavHeader, Sidebar, ErrorPage } from "./components";
 import {
-  Features,
+  Hero,
+  Navbar,
+  NavHeader,
+  Sidebar,
+  ErrorPage,
+  ScrollToTop,
+} from "./components";
+import {
   Footer,
   How_works,
   Contributors,
   NewResource,
-  // Category,
   Categories,
-  MainCategories,
 } from "./containers";
 import Newsletter from "./containers/Newsletter";
 import { useGlobalContext } from "../src/constants/Context";
@@ -24,6 +28,7 @@ const App = () => {
       <ResourceProvider>
         <div className={`${darkMode && "dark"}`}>
           <Router>
+            <ScrollToTop />
             <Navbar />
 
             <Routes>

@@ -20,7 +20,16 @@ const Navbar = () => {
             {/* <p className="text-[24px] text-white font-bold font-Space">
               Designers Lobby
             </p> */}
-            <img src={logo} alt="DesignersLobby Logo" className="w-full" />
+            <div className="flex items-center justify-center">
+              <img
+                src={logo}
+                alt="DesignersLobby Logo"
+                className="w--[50%] mr-[8px]"
+              />
+              <span className="text-[20px] font-Inter font-semibold md:font-bold text-white">
+                DesigersLobby
+              </span>
+            </div>
           </Link>
         </div>
         <div className="lg:flex md:flex xl:flex flex-auto items-center justify-center md:space-x-6 hidden">

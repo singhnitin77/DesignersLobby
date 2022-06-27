@@ -8,8 +8,8 @@ const Contributors = () => {
     {
       image: "https://avatars.githubusercontent.com/u/77439529?v=4",
       name: "Nitin Singh",
-      github_link: "github.com/singhnitin77",
-      work: "Front-End & UI/UX",
+      github_link: "https://github.com/singhnitin77",
+      work: "Full Stack Dev & UI/UX Designer",
       email: "mailto:thenitinsingh77@gmail.com",
       insta_link: "https://www.instagram.com/thenitinsingh7/",
       website_link: "https://www.thenitinsingh.com/",
@@ -18,7 +18,7 @@ const Contributors = () => {
       image: "https://avatars.githubusercontent.com/u/77439529?v=4",
       name: "Bharat Kumar",
       github_link: "https://github.com/Bharat-kr",
-      work: "Front-End & UI/UX",
+      work: "Full Stack Web Developer",
       email: "mailto: kumarbharat661@gmail.com",
       insta_link: "https://www.instagram.com/bharatkr_15/",
       website_link: "https://bharat-kr.github.io/Profile/",
@@ -27,10 +27,10 @@ const Contributors = () => {
       image: "https://avatars.githubusercontent.com/u/77439529?v=4",
       name: "Prashant kumar",
       github_link: "https://github.com/devprashantt",
-      work: "Front-End & UI/UX",
+      work: "Android & Web Developer",
       email: "mailto:officialprashanttt@gmail.com",
       insta_link: "https://www.instagram.com/king11prashant11/",
-      website_link: "https://powerful-waters-77913.herokuapp.com/",
+      website_link: "https://prashant-kumar.herokuapp.com/",
     },
   ];
 
@@ -63,23 +63,23 @@ const Contributors = () => {
   ];
 
   return (
-    <div className="bg-[#F5F9FF] w-full min-h-screen pb-10 dark:bg-[#2F2F2F] overflow-x-hidden">
+    <div className="bg-[#F5F9FF] w-full min-h-screen pb-10 dark:bg-[#2b2b2b] overflow-x-hidden">
       <DesignserLobbyBanner />
       <h1 className="text-[32px] text-gradient-how-it-works font-bold md:text-[36px] lg:text-[44px] my-[24px] flex items-center justify-center">
         Contributors
       </h1>
       <ContributeBanner
         // text="Contributors"
-        description="Designer's Lobby is empowered by various contributors who have compiled the highest quality resources.
+        description="Designers Lobby is empowered by various contributors who have compiled the highest quality resources.
 A big thanks to all the contributors who helped Designers Lobby and the Design community grow! Thank you! We thank all of them wholeheartedly."
       />
 
-      <div className="flex justify-center w-full ">
+      <div className="flex justify-center w-full">
         <div className="w-10/12 py-2">
           <div className="w-full flex px-3 my-2 mt-3 items-center">
             <div className="w-4/12 mx-auto h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
             <h3 className="mx-2 text-[#3d53ff] capitalize font-bold text-lg w-auto dark:text-white">
-              Designers Lobby built by
+              Github Contributors
             </h3>
             <div className="w-4/12 mx-auto h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
           </div>
@@ -87,7 +87,7 @@ A big thanks to all the contributors who helped Designers Lobby and the Design c
       </div>
 
       {/* Contributors card */}
-      <div className="px-[40px] my-[24px] w-full sm:w-full md:w-[70%] lg:w-[70%] xl:w-[70%] mx-auto">
+      <div className="px-[40px] my-[24px] w-full sm:w-full md:w-[70%] lg:w-[75%] xl:w-[75%] mx-auto">
         <div className="flex flex-col gap-y-[24px] items-center sm:flex-col md:flex-row lg:flex-row xl:flex-row justify-between lg:gap-x-4 md:gap-x-3 xl:gap-x-4">
           {contributordata.map((person, i) => {
             return (

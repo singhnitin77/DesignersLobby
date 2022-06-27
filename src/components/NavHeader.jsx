@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-
 import { FiGrid, FiList, FiMenu, FiMoon, FiSun } from "react-icons/fi";
-// import SearchBar from "./SearchBar";
 import { useGlobalContext } from "../constants/Context";
 import { BsSearch, BsX } from "react-icons/bs";
 import { useSubCategory } from "../context/SubCategory";

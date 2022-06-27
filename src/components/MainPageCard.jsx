@@ -1,11 +1,5 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import {
-  FiBookmark,
-  FiExternalLink,
-  FiMessageCircle,
-  FiTriangle,
-} from "react-icons/fi";
 
 import { BsFillBookmarkFIll } from "react-icons/bs";
 
@@ -13,10 +7,15 @@ const MainPageCard = ({ image, name, description, link, category }) => {
   return (
     <Link to={link}>
       <div
-        className="shadow-md bg-white transition duration-300 rounded-[12px] cursor-pointer border border-[#ddd] hover:border-[#3d5eff98] dark:bg-[#1f1f1f] dark:border-[#555] overflow-hidden"
+        className="shadow-md bg-white hover:shadow-lg transition duration-300 rounded-[12px] cursor-pointer border border-[#ddd] dark:bg-[#1f1f1f] dark:border-[#555] overflow-hidden"
         data-aos="fade-left"
       >
-        <img src={image} className="w-full block" />
+        <div className="overflow-hidden">
+          <img
+            src={image}
+            className="w-full block hover:scale-105 transition duration-300 overflow-hidden"
+          />
+        </div>
         <div className="flex flex-col justify-between">
           <div className="flex flex-col px-[18px] justify-start items-start h-[160px]">
             <h1 className="text-black font-semibold font-Inter text-[20px] mb-[10px] mt-[16px] leading-tight dark:text-white">

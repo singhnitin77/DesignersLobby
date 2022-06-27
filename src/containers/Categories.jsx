@@ -7,6 +7,7 @@ import {
   DesignserLobbyBanner,
   NavHeader,
   BannerCard,
+  ScrollButton,
 } from "../components";
 import { useResource } from "../context/Resource";
 import { useSubCategory } from "../context/SubCategory";
@@ -65,12 +66,11 @@ const Categories = ({}) => {
       <NavHeader searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
       <div className="w-full px-[35px] py-[40px] md:px-[80px] md:py-[80px] bg-[#F3F4FD] dark:bg-[#2f2f2f] overflow-hidden">
-        {/* <CategoryHeader name={categories} /> */}
-
         <BannerCard />
         {resource.loader ? <Loader /> : null}
 
         <ResourceContainer searchTerm={searchTerm} />
+        <ScrollButton showBelow={400} />
       </div>
     </>
   );
