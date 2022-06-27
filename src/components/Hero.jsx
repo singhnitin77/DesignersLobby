@@ -14,7 +14,7 @@ import NavHeader from "./NavHeader";
 const Hero = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const gaEventTracker = useAnalyticsEventTracker("Contact us");
+  const gaEventTracker = useAnalyticsEventTracker("Hero Section");
 
   return (
     <>

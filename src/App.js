@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ReactDOM from "react-dom";
 import {
   Hero,
   Navbar,
@@ -25,6 +26,10 @@ ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
   const { darkMode } = useGlobalContext();
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <SubCategoryProvider>
