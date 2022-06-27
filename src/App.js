@@ -19,6 +19,9 @@ import Newsletter from "./containers/Newsletter";
 import { useGlobalContext } from "../src/constants/Context";
 import { SubCategoryProvider } from "./context/SubCategory";
 import { ResourceProvider } from "./context/Resource";
+import ReactGA from "react-ga";
+const TRACKING_ID = "UA-233082829-1"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
   const { darkMode } = useGlobalContext();

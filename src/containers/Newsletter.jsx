@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import newsletter from "../assets/newsletter.png";
 import toast, { Toaster } from "react-hot-toast";
+// import useAnalyticsEventTracker from "./useAnalyticsEventTracker";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
@@ -61,11 +62,6 @@ const Newsletter = () => {
           onSubmit={handleSubmit}
         >
           <div className="flex items-start flex-col justify-between gap-2">
-            {/* <input
-                  type="text"
-                  className="shadow appearance-none border rounded w-[70%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  placeholder="Enter your email address"
-                /> */}
             <input
               type="email"
               className="w-[90%]  md:w-[70%] py-[12px] px-[16px] border border-gray-300 rounded-md placeholder:font-Inter placeholder:font-light focus:outline-none focus:shadow-outline shadow appearance-none font-Inter"

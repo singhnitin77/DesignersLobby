@@ -20,3 +20,4 @@ export { default as ResourceContributors } from "./ResourceContributors";
 export { default as TrendingtoolCard } from "./TrendingtoolCard";
 export { default as ScrollToTop } from "./ScrollToTop";
 export { default as ScrollButton } from "./ScrollButton";
+export { default as useAnalyticsEventTracker } from "./useAnalyticsEventTracker";

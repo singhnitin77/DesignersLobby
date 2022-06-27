@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, IconButton } from "@mui/material";
 import heroimage from "../assets/heroimage.png";
 import { Link } from "react-router-dom";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker";
 import {
   Features,
   How_works,
@@ -12,6 +13,8 @@ import NavHeader from "./NavHeader";
 
 const Hero = () => {
   const [searchTerm, setSearchTerm] = useState("");
+
+  const gaEventTracker = useAnalyticsEventTracker("Contact us");
 
   return (
     <>
@@ -27,19 +30,11 @@ const Hero = () => {
             to be more creative and make an effective & well-organized workflow.
           </p>
 
-          {/* <button
-            type="button"
-            className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-[18px] font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:outline-none"
-          >
-            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0  text-[18px] font-medium font-Space">
-              Try Now
-            </span>
-          </button> */}
-
           <a href="#nav-header">
             <button
               type="button"
               className="box-border relative z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-indigo-600 rounded-md cursor-pointer group   ease focus:outline-none"
+              onClick={() => gaEventTracker("Try Now Button")}
             >
               <span className="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
               <span className="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
