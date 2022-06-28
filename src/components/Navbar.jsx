@@ -32,7 +32,7 @@ const Navbar = () => {
                 className="w--[50%] mr-[8px]"
               />
               <span className="text-[20px] font-Inter font-semibold md:font-bold text-white">
-                DesigersLobby
+                DesignersLobby
               </span>
             </div>
           </Link>
