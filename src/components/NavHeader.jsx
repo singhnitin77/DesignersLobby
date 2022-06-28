@@ -4,8 +4,11 @@ import { useGlobalContext } from "../constants/Context";
 import { BsSearch, BsX } from "react-icons/bs";
 import { useSubCategory } from "../context/SubCategory";
 import { useResource } from "../context/Resource";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker";
 
 const NavHeader = ({ searchTerm, setSearchTerm }) => {
+  const gaEventTracker = useAnalyticsEventTracker("Dark Mode Btn Clicks");
+
   const {
     darkMode,
     setDarkMode,
@@ -67,7 +70,10 @@ const NavHeader = ({ searchTerm, setSearchTerm }) => {
             )}
           </div>
         </button>
-        <button className="rounded-md">
+        <button
+          className="rounded-md"
+          onClick={() => gaEventTracker("Dark Mode Btn")}
+        >
           <div
             className="border border-[#ddd] hover:border-[#3d5eff] text-[#3d5eff] duration-500 px-3 pl-4 py-[10px] text-lg capitalize rounded-lg font-semibold flex items-center justify-center dark:border-[#555] dark:text-white menu-animation-hover"
             onClick={toggleDarkMode}

@@ -1,8 +1,11 @@
 import React from "react";
 import { Features } from "./";
 import { Link } from "react-router-dom";
+import { useAnalyticsEventTracker } from "../components";
 
 const how_works = () => {
+  const gaEventTracker = useAnalyticsEventTracker("Contribute Button");
+
   return (
     <>
       <div className="w-full px-[35px] py-[40px] md:px-[60px] md:py-[80px] lg:py-[96px] dark:bg-[#0D1117] bg-[#F5F9FF]">
@@ -69,7 +72,10 @@ const how_works = () => {
 
           <div className="flex items-center justify-center mt-[72px]">
             <Link to="/newresource">
-              <button className="relative items-center justify-center inline-block p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group">
+              <button
+                className="relative items-center justify-center inline-block p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group"
+                onClick={() => gaEventTracker("Contribute Btn")}
+              >
                 <span className="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
                 <span className="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">
                   <span className="absolute bottom-0 left-0 w-24 h-24 -ml-10 bg-purple-500 rounded-full blur-md"></span>

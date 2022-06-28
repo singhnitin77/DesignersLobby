@@ -7,8 +7,11 @@ import SidebarCard from "./SidebarCard";
 
 import { FiChevronRight } from "react-icons/fi";
 import { useSubCategory } from "../context/SubCategory";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker";
 
 const Sidebar = () => {
+  const gaEventTracker = useAnalyticsEventTracker("Drawer Button");
+
   const { showDrawer, toggleDrawer, darkMode } = useGlobalContext();
 
   const [value, setValue] = useState("categories");
@@ -45,7 +48,12 @@ const Sidebar = () => {
   };
 
   return (
-    <Drawer anchor="left" open={showDrawer} onClose={toggleDrawer}>
+    <Drawer
+      anchor="left"
+      open={showDrawer}
+      onClose={toggleDrawer}
+      onClick={() => gaEventTracker("Drawer Button Category")}
+    >
       <div
         className={`${
           darkMode ? "dark bg-[#2f2f2f] text-white" : "bg-[#ECF2F5]"

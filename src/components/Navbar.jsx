@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker";
 // import { FiMenu } from "@material-ui/core/Menu";
 import { Menu } from "@mui/material";
 import { FiMenu } from "react-icons/fi";
@@ -9,6 +9,8 @@ import logo from "../assets/logo.png";
 // import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const gaEventTracker = useAnalyticsEventTracker("Navbar Logo Btn");
+
   const [showNav, setShowNav] = useState(false);
 
   return (
@@ -20,7 +22,10 @@ const Navbar = () => {
             {/* <p className="text-[24px] text-white font-bold font-Space">
               Designers Lobby
             </p> */}
-            <div className="flex items-center justify-center">
+            <div
+              className="flex items-center justify-center"
+              onClick={() => gaEventTracker("Logo Btn")}
+            >
               <img
                 src={logo}
                 alt="DesignersLobby Logo"
