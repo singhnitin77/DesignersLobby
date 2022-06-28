@@ -3,7 +3,7 @@ import { Features } from "./";
 import { Link } from "react-router-dom";
 import { useAnalyticsEventTracker } from "../components";
 
-const how_works = () => {
+const How_works = () => {
   const gaEventTracker = useAnalyticsEventTracker("Contribute Button");
 
   return (
@@ -94,4 +94,4 @@ const how_works = () => {
   );
 };
 
-export default how_works;
+export default How_works;
