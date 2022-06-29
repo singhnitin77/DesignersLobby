@@ -6,7 +6,7 @@
 
 <p align="center">
 <a href="https://www.designerslobby.com">
-<img src="public/readme/designers-lobby.png" width="300"/>
+<img src="public/readme/designerslobby-text.png" width="300"/>
 </a>
 </p>
 
