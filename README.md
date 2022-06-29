@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+<p align="center">
+<a href="https://www.designerslobby.com/">
+<img src="public/apple-touch-icon.png" alt="Designers Lobby" width="125" height="125">
+</a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<a href="https://www.designerslobby.com">
+<img src="public/readme/designers-lobby.png" width="300"/>
+</a>
+</p>
 
-## Available Scripts
+<h3 align="center">All your Design Resources & Tools in one place</h3>
 
-In the project directory, you can run:
+<p align="center">
+<a href="">
+<img src="https://img.shields.io/github/license/singnitin77/DesignersLobby?style=flat-square" alt="Designers Lobby licence">
+</a>
+<a href="">
+<img src="https://img.shields.io/github/forks/singnitin77/DesignersLobby?style=flat-square" alt="Designers Lobby forks">
+</a>
+<a href="">
+<img src="https://img.shields.io/github/stars/singnitin77/DesignersLobby?style=flat-square" alt="Designers Lobby stars">
+</a>
+<a href="">
+<img src="https://img.shields.io/github/issues/singnitin77/DesignersLobby?style=flat-square" alt="Designers Lobby issues">
+</a>
+<a href="">
+<img src="https://img.shields.io/github/issues-pr/singnitin77/DesignersLobby?style=flat-square" alt="Designers Lobby pull-requests">
+</a>
+<a href="https://twitter.com/intent/tweet?text=Checkout%20desigerslobby.com%20by%20@thenitinsingh7%0A%0AWorld's%20biggest%20collection%20of%20Best%20design%20resources%20and%20tools%20all%20in%20one%20place,%20with%20amazing%20features.%20This%20is%20something%20you%20don't%20want%20to%20miss!">
+<img src="https://img.shields.io/twitter/url?label=Share%20on%20Twitter&style=social&url=https%3A%2F%2Fgithub.com%2Fsingnitin77%2FDesignersLobby"/>
+</a>
+</p>
 
-### `npm start`
+### Introducing Designers Lobby
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Designers Lobby is a curated collection of more than 1200 design resources and tools with over 60 categories handpicked from the web to help build your next digital product lightning-fast, enabling you to be more creative and make an effective & well-organized workflow.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Read Blog]()
 
-### `npm test`
+## Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<a href="https://www.designerslobby.com/">
+<img src="public/readme/designerslobby-banner.png"/>
+</a>
 
-### `npm run build`
+Try the App: [Designers Lobby](https://www.designerslobby.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Designers Lobby is super huge with more than 1200 resources and tools over 60 categories, Some of the best features of the app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 😍 **1200+ Resources**
+- 🥳 **60 Categories**
+- 📁 **Filter by Category**
+- 🔍 **Filter by Search**
+- 👨 **Contributors Page**
+- 📧 **Newsletter feature**
+- 🌙 **Dark mode**
+- 📱 **Fully Responsive**
+- ➕ **Add a new resource**
+- 📈 **Trending Resources**
+- 🎨 **Clean User Interface**
+- 🤼 **Built for Everyone**
 
-### `npm run eject`
+## Installation Steps
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Changed the working directory
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+cd designerslobby
+```
 
-## Learn More
+3. Install dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Create `.env` file in root and add your variables
 
-### Code Splitting
+```bash
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
 
-### Analyzing the Bundle Size
+5. Run the app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
 
-### Making a Progressive Web App
+## Built with
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [React JS](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/): For complete styling
+- [Material UI](http://material-ui.com/): For Components
+- [react-icons](https://react-icons.github.io/react-icons/): for icons
+- [react-hot-toast](https://react-hot-toast.com/): for toasts
+- [AOS](https://michalsnik.github.io/aos/): for scroll animations
+- [Animate.css](https://animate.style/): for smooth animations
+- [Node JS]():
+- [Mongo DB]():
+- [Express JS]():
+- [Vercel](http://vercel.com/):
+- [Netlify](https://www.netlify.com/):for Hosting
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is licenced under the MIT License - see the [`LICENSE`](LICENSE) file for details.
 
-### Deployment
+## 👫 Thanks to the all Resource Contributors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+A big thanks to all the contributors who helped Designers Lobby and the Design community grow! Thank you! We thank all of them wholeheartedly.
 
-### `npm run build` fails to minify
+keep rocking 🍺
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Check them on [designerslobby.com/contributors](https://www.designerslobby.com/contributors)
+
+## 🙏 Support
+
+Don't forget to leave a star ⭐
