@@ -30,33 +30,46 @@ const Hero = () => {
             to be more creative and make an effective & well-organized workflow.
           </p>
 
-          <a href="#nav-header">
-            <button
-              type="button"
-              className="box-border relative z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-indigo-600 rounded-md cursor-pointer group   ease focus:outline-none"
-              onClick={() => gaEventTracker("Try Now Button")}
+          <div className="flex gap-y-3 gap-x-4 flex-col md:flex-row items-center justify-center">
+            <a href="#nav-header">
+              <button
+                type="button"
+                className="box-border relative z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-indigo-600 rounded-md cursor-pointer group   ease focus:outline-none"
+                onClick={() => gaEventTracker("Try Now Button")}
+              >
+                <span className="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+                <span className="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+                <span className="relative z-20 flex font-Inter font-medium items-center text-[18px]">
+                  <svg
+                    className="relative w-5 h-5 mr-2 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    ></path>
+                  </svg>
+                  Try Now
+                </span>
+              </button>
+            </a>
+
+            <a
+              href="https://www.producthunt.com/posts/designers-lobby?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-designers&#0045;lobby"
+              target="_blank"
             >
-              <span className="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
-              <span className="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
-              <span className="relative z-20 flex items-center text-sm">
-                <svg
-                  className="relative w-5 h-5 mr-2 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  ></path>
-                </svg>
-                Try Now
-              </span>
-            </button>
-          </a>
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=351857&theme=light"
+                alt="Designers Lobby Product Hunt"
+                className="w-[250px] h-[54px]"
+              />
+            </a>
+          </div>
         </div>
 
         <div className="flex flex-1 justify-center items-center animate__animated animate__fadeInRight">

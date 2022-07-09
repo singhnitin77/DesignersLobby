@@ -33,7 +33,19 @@ const Footer = () => {
             thedesignerslobby@gmail.com
           </a>
 
-          <div className="flex flex-row items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-center">
+            <div className="lg:ml-1 xl:ml-1 mt-2 xl:mt-0 lg:mt-0">
+              <a
+                href="https://www.producthunt.com/posts/designers-lobby?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-designers&#0045;lobby"
+                target="_blank"
+              >
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=351857&theme=light"
+                  alt="Designers Lobby Product Hunt"
+                  className="w-[185px] h-10"
+                />
+              </a>
+            </div>
             <div className="lg:ml-1 xl:ml-1 mt-2 xl:mt-0 lg:mt-0">
               <CoffeeButton />
             </div>

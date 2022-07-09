@@ -42,7 +42,15 @@ Designers Lobby is a curated collection of more than 1200 design resources and t
 ## Demo
 
 <a href="https://www.designerslobby.com/">
-<img src="public/readme/designerslobby-banner.png"/>
+<img src="public/readme/gallery-1.png"/>
+</a>
+
+<a href="https://www.designerslobby.com/">
+<img src="public/readme/gallery-2.png"/>
+</a>
+
+<a href="https://www.designerslobby.com/">
+<img src="public/readme/gallery-3.png"/>
 </a>
 
 Try the App: [Designers Lobby](https://www.designerslobby.com/)
