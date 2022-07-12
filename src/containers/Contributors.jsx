@@ -36,7 +36,19 @@ const Contributors = () => {
 
   const resourcecontributors = [
     {
+      name: "Jeffrey Betts",
+    },
+    {
+      name: "Shahadat Rahman",
+    },
+    {
+      name: "Zion",
+    },
+    {
       name: "Vishal",
+    },
+    {
+      name: "Bhavesh Vaid",
     },
     {
       name: "Aditya Singh",
