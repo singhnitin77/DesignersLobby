@@ -496,7 +496,7 @@
   animation: 6s rotate linear infinite;
 }
 
-.class1 {
+.category_gradient_class {
   background: -webkit-linear-gradient(to left, #764dff, #239eb9,#d73e87);  
       background: linear-gradient(to left, #764dff, #239eb9,#d73e87);
       -webkit-background-clip: text;
