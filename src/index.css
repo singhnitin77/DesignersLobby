@@ -495,3 +495,10 @@
     1;
   animation: 6s rotate linear infinite;
 }
+
+.class1 {
+  background: -webkit-linear-gradient(to left, #764dff, #239eb9,#d73e87);  
+      background: linear-gradient(to left, #764dff, #239eb9,#d73e87);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
