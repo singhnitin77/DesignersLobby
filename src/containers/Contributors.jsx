@@ -1,38 +1,19 @@
-import React from "react";
+import {useEffect, useState} from "react";
 import DesignserLobbyBanner from "../components/DesignserLobbyBanner";
 import ContributeCard from "../components/ContributeCard";
 import { ContributeBanner, ResourceContributors } from "../components";
 
 const Contributors = () => {
-  const contributordata = [
-    {
-      image: "https://avatars.githubusercontent.com/u/77439529?v=4",
-      name: "Nitin Singh",
-      github_link: "https://github.com/singhnitin77",
-      work: "Full Stack Dev & UI/UX Designer",
-      email: "mailto:thenitinsingh77@gmail.com",
-      insta_link: "https://www.instagram.com/thenitinsingh7/",
-      website_link: "https://www.thenitinsingh.com/",
-    },
-    {
-      image: "https://avatars.githubusercontent.com/u/77439529?v=4",
-      name: "Bharat Kumar",
-      github_link: "https://github.com/Bharat-kr",
-      work: "Full Stack Web Developer",
-      email: "mailto: kumarbharat661@gmail.com",
-      insta_link: "https://www.instagram.com/bharatkr_15/",
-      website_link: "https://bharat-kr.github.io/Profile/",
-    },
-    {
-      image: "https://avatars.githubusercontent.com/u/77439529?v=4",
-      name: "Prashant kumar",
-      github_link: "https://github.com/devprashantt",
-      work: "Android & Web Developer",
-      email: "mailto:officialprashanttt@gmail.com",
-      insta_link: "https://www.instagram.com/king11prashant11/",
-      website_link: "https://prashant-kumar.herokuapp.com/",
-    },
-  ];
+  const [contributors, setContributors] = useState([]);
+  const getContributors = async () => {
+    const response = await fetch("https://api.github.com/repos/singhnitin77/DesignersLobby/contributors");
+    const data = await response.json();
+    setContributors(data);
+  }
+
+  useEffect(() => {
+    getContributors();
+  }, []);
 
   const resourcecontributors = [
     {
@@ -88,7 +69,7 @@ A big thanks to all the contributors who helped Designers Lobby and the Design c
 
       <div className="flex justify-center w-full">
         <div className="w-10/12 py-2">
-          <div className="w-full flex px-3 my-2 mt-3 items-center">
+          <div className="flex items-center w-full px-3 my-2 mt-3">
             <div className="w-4/12 mx-auto h-[2px] rounded-sm bg-[#ddd] bg-gradient-3"></div>
             <h3 className="mx-2 text-[#3d53ff] capitalize font-bold text-lg w-auto dark:text-white">
               Github Contributors
@@ -99,22 +80,15 @@ A big thanks to all the contributors who helped Designers Lobby and the Design c
       </div>
 
       {/* Contributors card */}
-      <div className="px-[40px] my-[24px] w-full sm:w-full md:w-[70%] lg:w-[75%] xl:w-[75%] mx-auto">
-        <div className="flex flex-col gap-y-[24px] items-center sm:flex-col md:flex-row lg:flex-row xl:flex-row justify-between lg:gap-x-4 md:gap-x-3 xl:gap-x-4">
-          {contributordata.map((person, i) => {
-            return (
+      <div className="w-full h-full py-[72px] md:py-[80px] lg:py-[100px] px-[60px] dark:bg-[#333333]">
+        <div className="grid lg:grid-cols-4 gap-x-4">
+          {contributors?.length > 0 && contributors.map((person, i) => (
               <ContributeCard
-                image={person.image}
-                name={person.name}
-                github_link={person.github_link}
-                work={person.work}
-                email={person.email}
-                website_link={person.website_link}
-                insta_link={person.insta_link}
+                url={person.url}
                 key={i}
               />
-            );
-          })}
+            )
+          )}
         </div>
       </div>
 
