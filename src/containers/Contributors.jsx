@@ -82,7 +82,7 @@ A big thanks to all the contributors who helped Designers Lobby and the Design c
       {/* Contributors card */}
       <div className="w-full h-full py-[72px] md:py-[80px] lg:py-[100px] px-[60px] dark:bg-[#333333]">
         <div className="grid lg:grid-cols-4 gap-x-4">
-          {contributors.map((person, i) => (
+          {contributors?.length > 0 && contributors.map((person, i) => (
               <ContributeCard
                 url={person.url}
                 key={i}
