@@ -17,7 +17,7 @@ const ContributeCard = ({
   }, [url]);
   return (
     <div
-      className="p-4 hover:shadow-2xl hover:shadow-gray-400 bg-white m-3 rounded-lg transition-all ease-in-out duration-500 cursor-pointer text-[#222] dark:bg-[#222222] border dark:border-[#444]"
+      className="p-4 hover:shadow-2xl bg-white m-3 rounded-lg transition-all ease-in-out duration-300 cursor-pointer text-[#222] dark:bg-[#222222] border dark:border-[#444]"
       data-aos="fade-left"
     >
         <img
