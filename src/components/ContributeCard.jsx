@@ -40,30 +40,42 @@ const ContributeCard = ({
           {userData.html_url}
         </a>
         <div className="flex items-center gap-3 pt-4">
-          <a
-            href={`mailto:${userData.email}`}
-            className="dark:text-[#fafafa] hover:text-[#999] dark:hover:text-[#ccc]"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <FiMail className="text-[20px]" />
-          </a>
-          <a
-            href={userData.blog}
-            className="dark:text-[#fafafa] hover:text-[#999] dark:hover:text-[#ccc]"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <FiLink className="text-[20px]" />
-          </a>
-          <a
-            href={`https://twitter.com/${userData.twitter_username}`}
-            className="dark:text-[#fafafa] hover:text-[#999] dark:hover:text-[#ccc]"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <FiTwitter className="text-[20px]" />
-          </a>
+            {
+                userData.email && (
+                    <a
+                        href={`mailto:${userData.email}`}
+                        className="dark:text-[#fafafa] hover:text-[#999] dark:hover:text-[#ccc]"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <FiMail className="text-[20px]" />
+                    </a>
+                )
+            }
+            {
+                userData.blog && (
+                    <a
+                        href={userData.blog}
+                        className="dark:text-[#fafafa] hover:text-[#999] dark:hover:text-[#ccc]"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <FiLink className="text-[20px]" />
+                    </a>
+                )
+            }
+            {
+                userData.twitter_username && (
+                    <a
+                        href={`https://twitter.com/${userData.twitter_username}`}
+                        className="dark:text-[#fafafa] hover:text-[#999] dark:hover:text-[#ccc]"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <FiTwitter className="text-[20px]" />
+                    </a>
+                )
+            }
       </div>
     </div>
   );
