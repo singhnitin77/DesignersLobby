@@ -17,19 +17,18 @@ const ContributeCard = ({
   }, [url]);
   return (
     <div
-      className="gradient-shadow p-[4px] rounded-md transtion duration-500 cursor-pointer text-[#222] md:w-[40%] w-[80%] lg:w-[90%] xl:w-[90%] hover:border-[#3d5eff98] bg-gradient-3"
+      className="p-4 hover:shadow-2xl hover:shadow-gray-400 bg-white m-3 rounded-lg transition-all ease-in-out duration-500 cursor-pointer text-[#222] dark:bg-[#222222] border dark:border-[#444]"
       data-aos="fade-left"
     >
-      <div className="bg-white rounded-md p-[16px] dark:bg-[#222222]">
         <img
           src={userData.avatar_url}
           alt={userData.name}
           className="w-full overflow-hidden transition duration-300 rounded-md"
         />
-        <h1 className="text-[18px] leading-[1.1] lg:text-[24px] xl:text-[24px] md:text-[18px] font-semibold mt-2 capitalize font-Inter dark:text-[#fafafa] mb-[6px]">
+        <h1 className="text-2xl font-semibold font-Epilogue mt-2 capitalize dark:text-[#fafafa]">
           {userData.name}
         </h1>
-        <h3 className="lg:text-[18px] xl:text-[18px] md:text-[16px] font-medium capitalize font-Inter dark:text-[#eee]">
+        <h3 className="text-[14px] leading-[1.15] h-[50px] font-Epilogue text-[#666] dark:text-[#ccc]">
           {userData.bio}
         </h3>
         <a
@@ -40,10 +39,10 @@ const ContributeCard = ({
         >
           {userData.html_url}
         </a>
-        <div className="flex items-center mt-[10px] gap-x-[10px]">
+        <div className="flex items-center gap-3 pt-4">
           <a
             href={`mailto:${userData.email}`}
-            className="hover:text-[#999] dark:text-[#fafafa] dark:hover:text-[#ccc]"
+            className="dark:text-[#fafafa] hover:text-[#999] dark:hover:text-[#ccc]"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -51,7 +50,7 @@ const ContributeCard = ({
           </a>
           <a
             href={userData.blog}
-            className="hover:text-[#999] dark:text-[#fafafa] dark:hover:text-[#ccc]"
+            className="dark:text-[#fafafa] hover:text-[#999] dark:hover:text-[#ccc]"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -59,13 +58,12 @@ const ContributeCard = ({
           </a>
           <a
             href={`https://twitter.com/${userData.twitter_username}`}
-            className="hover:text-[#999] dark:text-[#fafafa] dark:hover:text-[#ccc]"
+            className="dark:text-[#fafafa] hover:text-[#999] dark:hover:text-[#ccc]"
             target="_blank"
             rel="noreferrer noopener"
           >
             <FiTwitter className="text-[20px]" />
           </a>
-        </div>
       </div>
     </div>
   );

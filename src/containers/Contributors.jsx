@@ -80,8 +80,8 @@ A big thanks to all the contributors who helped Designers Lobby and the Design c
       </div>
 
       {/* Contributors card */}
-      <div className="px-[40px] my-[24px] w-full sm:w-full md:w-[70%] lg:w-[75%] xl:w-[75%] mx-auto">
-        <div className="flex flex-col gap-y-[24px] items-center sm:flex-col md:flex-row lg:flex-row xl:flex-row justify-between lg:gap-x-4 md:gap-x-3 xl:gap-x-4">
+      <div className="w-full h-full py-[72px] md:py-[80px] lg:py-[100px] px-[60px] dark:bg-[#333333]">
+        <div className="grid lg:grid-cols-4 gap-x-4">
           {contributors.map((person, i) => (
               <ContributeCard
                 url={person.url}
