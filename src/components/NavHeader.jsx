@@ -37,7 +37,7 @@ const NavHeader = ({ searchTerm, setSearchTerm }) => {
         <button onClick={toggleDrawer}>
           <div className="border border-[#ddd] hover:border-[#3d5eff] text-[#3d5eff] duration-300 px-3 lg:px-5 py-[10px] text-[16px] lg:text-[20px] capitalize rounded-lg flex items-center justify-center font-Inter font-semibold dark:text-white dark:border-[#555]">
             <FiMenu className="text-[20px] lg:text-[24px] ml-1 duration-300 hover:scale-105" />
-            <span className="ml-[10px]">Category</span>
+            <span className="ml-[10px] category_gradient_class">Category</span>
           </div>
         </button>
 
