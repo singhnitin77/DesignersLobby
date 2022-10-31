@@ -1,63 +1,81 @@
-import React from "react";
-import { FiLink, FiInstagram, FiMail } from "react-icons/fi";
+import React, {useEffect, useState} from "react";
+import { FiLink, FiMail, FiTwitter } from "react-icons/fi";
 
 const ContributeCard = ({
-  image,
-  name,
-  github_link,
-  work,
-  email,
-  insta_link,
-  website_link,
+  url
 }) => {
+  const [userData, setUserData] = useState({});
+
+  const getUserData = async (url) => {
+    const response = await fetch(`${url}`);
+    const data = await response.json();
+    setUserData(data);
+  }
+
+  useEffect(() => {
+    getUserData(url);
+  }, [url]);
   return (
     <div
-      className="gradient-shadow p-[4px] rounded-md transtion duration-500 cursor-pointer text-[#222] md:w-[40%] w-[80%] lg:w-[90%] xl:w-[90%] hover:border-[#3d5eff98] bg-gradient-3"
+      className="p-4 hover:shadow-2xl bg-white m-3 rounded-lg transition-all ease-in-out duration-300 cursor-pointer text-[#222] dark:bg-[#222222] border dark:border-[#444]"
       data-aos="fade-left"
     >
-      <div className="bg-white rounded-md p-[16px] dark:bg-[#222222]">
         <img
-          src={image}
-          alt={name}
-          className="rounded-md w-full overflow-hidden transition duration-300"
+          src={userData.avatar_url}
+          alt={userData.name}
+          className="w-full overflow-hidden transition duration-300 rounded-md"
         />
-        <h1 className="text-[18px] leading-[1.1] lg:text-[24px] xl:text-[24px] md:text-[18px] font-semibold mt-2 capitalize font-Inter dark:text-[#fafafa] mb-[6px]">
-          {name}
+        <h1 className="text-2xl font-semibold font-Epilogue mt-2 capitalize dark:text-[#fafafa]">
+          {userData.name}
         </h1>
-        <h3 className="lg:text-[18px] xl:text-[18px] md:text-[16px] font-medium capitalize font-Inter dark:text-[#eee]">
-          {work}
+        <h3 className="text-[14px] leading-[1.15] h-[50px] font-Epilogue text-[#666] dark:text-[#ccc]">
+          {userData.bio}
         </h3>
         <a
-          href={github_link}
+          href={userData.html_url}
           className="text-[12px] lg:text-[14px] xl:text-[14px] overflow-ellipsis overflow-hidden font-Inter text-[#3d53ff] dark:text-blue-300 mb-[16px]"
           target="_blank"
           rel="noreferrer"
         >
-          {github_link}
+          {userData.html_url}
         </a>
-        <div className="flex items-center mt-[10px] gap-x-[10px]">
-          <a
-            href={email}
-            className="hover:text-[#999] dark:text-[#fafafa] dark:hover:text-[#ccc]"
-            target="_blank"
-          >
-            <FiMail className="text-[20px]" />
-          </a>
-          <a
-            href={website_link}
-            className="hover:text-[#999] dark:text-[#fafafa] dark:hover:text-[#ccc]"
-            target="_blank"
-          >
-            <FiLink className="text-[20px]" />
-          </a>
-          <a
-            href={insta_link}
-            className="hover:text-[#999] dark:text-[#fafafa] dark:hover:text-[#ccc]"
-            target="_blank"
-          >
-            <FiInstagram className="text-[20px]" />
-          </a>
-        </div>
+        <div className="flex items-center gap-3 pt-4">
+            {
+                userData.email && (
+                    <a
+                        href={`mailto:${userData.email}`}
+                        className="dark:text-[#fafafa] hover:text-[#999] dark:hover:text-[#ccc]"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <FiMail className="text-[20px]" />
+                    </a>
+                )
+            }
+            {
+                userData.blog && (
+                    <a
+                        href={userData.blog}
+                        className="dark:text-[#fafafa] hover:text-[#999] dark:hover:text-[#ccc]"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <FiLink className="text-[20px]" />
+                    </a>
+                )
+            }
+            {
+                userData.twitter_username && (
+                    <a
+                        href={`https://twitter.com/${userData.twitter_username}`}
+                        className="dark:text-[#fafafa] hover:text-[#999] dark:hover:text-[#ccc]"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <FiTwitter className="text-[20px]" />
+                    </a>
+                )
+            }
       </div>
     </div>
   );
