@@ -502,3 +502,8 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 }
+
+.zoom:hover {
+  transition: all 1s ease;
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
