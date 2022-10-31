@@ -21,60 +21,60 @@ const Features = () => {
       name: "1300 Resources",
       description:
         "DesignersLobby is world's biggest collection of best design Resources & Tools.",
-      icon: <FiDatabase className="text-2xl lg:text-4xl xl:text-4xl" />,
+      icon: <FiDatabase className="text-2xl zoom lg:text-4xl xl:text-4xl" />,
     },
 
     {
       name: "Category Filter",
       description:
         "By filtering by categories, you can find what you are looking for more easily.",
-      icon: <FiFilter className="text-2xl lg:text-4xl xl:text-4xl" />,
+      icon: <FiFilter className="text-2xl zoom lg:text-4xl xl:text-4xl" />,
     },
     {
       name: "Search Filter",
       description: "You can filter resources and tools by Search Filter.",
-      icon: <FiSearch className="text-2xl lg:text-4xl xl:text-4xl" />,
+      icon: <FiSearch className="text-2xl zoom lg:text-4xl xl:text-4xl" />,
     },
     {
       name: "Add new Resource",
       description:
         "You can add a new resource to designers Lobby, in the new resource section.",
-      icon: <FiPlusCircle className="text-2xl lg:text-4xl xl:text-4xl" />,
+      icon: <FiPlusCircle className="text-2xl zoom lg:text-4xl xl:text-4xl" />,
     },
     {
       name: "Clean User Interface",
       description:
         "Designers Lobby is crafted with a minimal, intuitive, and sleek design.",
-      icon: <FiPenTool className="text-2xl lg:text-4xl xl:text-4xl" />,
+      icon: <FiPenTool className="text-2xl zoom lg:text-4xl xl:text-4xl" />,
     },
     {
       name: "Newsletter feature",
       description:
         "Subscribe to our minimal and beautiful newsletter to get 5 fresh resources",
-      icon: <HiOutlineMail className="text-2xl lg:text-4xl xl:text-4xl" />,
+      icon: <HiOutlineMail className="text-2xl zoom lg:text-4xl xl:text-4xl" />,
     },
     {
       name: "Contributors Page",
       description:
         "Our contributors are proudly displayed on our contributor's page.",
-      icon: <FiUsers className="text-2xl lg:text-4xl xl:text-4xl" />,
+      icon: <FiUsers className="text-2xl zoom lg:text-4xl xl:text-4xl" />,
     },
     {
       name: "Trending Resources",
       description:
         "Dedicated section for latest and trending design resources and tools",
-      icon: <FiTrendingUp className="text-2xl lg:text-4xl xl:text-4xl" />,
+      icon: <FiTrendingUp className="text-2xl zoom lg:text-4xl xl:text-4xl" />,
     },
     {
       name: "Dark Mode",
       description: "You can choose between Light or Dark Mode.",
-      icon: <FiMoon className="text-2xl lg:text-4xl xl:text-4xl" />,
+      icon: <FiMoon className="text-2xl zoom lg:text-4xl xl:text-4xl" />,
     },
     {
       name: "Built for Everyone",
       description:
         "Our aim is to help design teams, developers, content creators, & freelancers",
-      icon: <FiUser className="text-2xl lg:text-4xl xl:text-4xl" />,
+      icon: <FiUser className="text-2xl zoom lg:text-4xl xl:text-4xl" />,
     },
   ];
 
