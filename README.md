@@ -127,7 +127,7 @@ This project is licenced under the MIT License - see the [`LICENSE`](LICENSE) fi
 
 A big thanks to all the contributors who helped Designers Lobby and the Design community grow! Thank you! We thank all of them wholeheartedly.
 
-keep rocking 🍺
+keep rocking 🍺🍺
 
 Check them on [designerslobby.com/contributors](https://www.designerslobby.com/contributors)
 
